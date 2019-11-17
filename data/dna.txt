@@ -1,0 +1,61 @@
+{
+    "html": [
+        "README.md",
+        "index.html",
+        "list.html",
+        "map.html",
+        "pageeditor.html",
+        "print.html",
+        "scroll.html"
+    ],
+    "javascript": [
+        "mapfactory.js"
+    ],
+    "iconsymbols": [
+        "add.svg",
+        "arrow.svg",
+        "bullseye.svg",
+        "delete.svg",
+        "downelement.svg",
+        "edit.svg",
+        "elementdown.svg",
+        "elementup.svg",
+        "expand.svg",
+        "expandsmall.svg",
+        "fork.svg",
+        "goldenspiral.svg",
+        "hexagon.svg",
+        "iconset.svg",
+        "left.svg",
+        "leftsmall.svg",
+        "map.svg",
+        "pentagram.svg",
+        "right.svg",
+        "rightsmall.svg",
+        "rotate.svg",
+        "save.svg",
+        "scale.svg",
+        "scroll.svg",
+        "shrink.svg",
+        "shrinksmall.svg",
+        "upelement.svg"
+    ],
+    "data": [
+        "currentMap.txt",
+        "dna.txt"
+    ],
+    "php": [
+        "deletebranch.txt",
+        "deletefile.txt",
+        "dir.txt",
+        "dnagenerator.txt",
+        "editor.txt",
+        "fileloader.txt",
+        "filesaver.txt",
+        "mkdir.txt",
+        "mkmap.txt",
+        "replicator.txt",
+        "text2php.txt",
+        "upload.txt"
+    ]
+}
