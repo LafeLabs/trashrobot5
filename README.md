@@ -3,6 +3,10 @@
 
 # Trash robot
 
+## UNO Shield
+
+[link to page on pcbway to buy board](https://www.pcbway.com/project/shareproject/Generic_Trash_Robot_UNO_Shield__V5.html)
+
 ![](boards/unoshield.png)
 
 ## UNO Shield BOM
@@ -31,6 +35,10 @@
 |   JS2  |4X SOCKET| [digikey SAM1206-04-ND](https://www.digikey.com/product-detail/en/samtec-inc/SSQ-104-03-T-S/SAM1206-04-ND/1111954)|
 |   JS3  |5X SOCKET| [digikey SAM1206-05-ND](https://www.digikey.com/product-detail/en/samtec-inc/SSQ-105-03-T-S/SAM1206-05-ND/1111953)|
 
+
+## Dual H Bridge
+
+[link to buy on PCBway](https://www.pcbway.com/project/shareproject/Dual_H_Bridge__V_5.html)
 
 ![](boards/dualhbridge.png)
 
@@ -74,11 +82,19 @@
 | Hookup Wire Kit | [Adafruit $19.95](https://www.adafruit.com/product/3111) |
 | 3 axis Accelerometer | [Adafruit $7.95](https://www.adafruit.com/product/2019) |
 | I2C Pressure Sensor| [Adafruit $9.95](https://www.adafruit.com/product/2651) |
+|ultrasonic range finder|[Sparkfun $3.95](https://www.sparkfun.com/products/15569)|
 | Neopixel 8x array| [Adafruit $5.95](https://www.adafruit.com/product/1426) |
 | Hot Air Rework Tool| [Sparkfun $129.95](https://www.sparkfun.com/products/14557) |
 | Soldering Iron| [Sparkfun $129.00](https://www.sparkfun.com/products/14734) |
 | Lead Free Solder| [Sparkfun $7.95](https://www.sparkfun.com/products/9325) |
 
+
+- [boards/unoshield-v5.brd](boards/unoshield-v5.brd)
+- [boards/unoshield-v5.sch](boards/unoshield-v5.sch)
+- [boards/unoshield-v5-bom.xlsx](boards/unoshield-v5-bom.xlsx)
+- [boards/dualHbridge-v5.brd](boards/dualHbridge-v5.brd)
+- [boards/dualHbridge-v5.sch](boards/dualHbridge-v5.sch)
+- [boards/dualHbridge-v5bom.xlsx](boards/dualHbridge-v5bom.xlsx)
 
 
 

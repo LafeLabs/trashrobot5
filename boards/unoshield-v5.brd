@@ -170,7 +170,7 @@
 <text x="27.94" y="36.195" size="1.778" layer="21">A2</text>
 <text x="1.397" y="59.944" size="1.778" layer="21">-</text>
 <text x="39.751" y="56.515" size="1.27" layer="21" rot="R180">D2</text>
-<text x="28.194" y="31.877" size="2.54" layer="22" rot="MR270">www.trashrobot.org
+<text x="20.193" y="11.049" size="1.27" layer="21">trashrobot
 unoshield-v5</text>
 <text x="6.35" y="40.386" size="1.27" layer="21" rot="R270">Vpower</text>
 <text x="6.985" y="54.991" size="1.27" layer="21" rot="R180">D6</text>
@@ -189,11 +189,7 @@ unoshield-v5</text>
 <text x="3.175" y="49.403" size="1.27" layer="21">10k</text>
 <text x="21.463" y="18.415" size="1.27" layer="21" rot="R90">S1BFSCT-ND</text>
 <text x="35.56" y="25.908" size="1.27" layer="21" rot="R180">277-6354-ND</text>
-<text x="6.35" y="48.133" size="1.27" layer="22" rot="MR180">1000uF Cap
-1189-1745-ND </text>
 <text x="18.415" y="62.357" size="1.016" layer="21" rot="R180">Button</text>
-<text x="41.275" y="42.418" size="1.27" layer="22" rot="MR0">20k Pot
-PTV09A-4030U-B203-ND</text>
 <text x="43.815" y="27.559" size="1.778" layer="21" rot="R90">+</text>
 <text x="46.609" y="35.433" size="1.27" layer="21" rot="R180">GND</text>
 <text x="43.688" y="30.861" size="1.27" layer="21" rot="R90">A1</text>
@@ -202,11 +198,8 @@ PTV09A-4030U-B203-ND</text>
 <text x="17.526" y="56.515" size="1.27" layer="21" rot="R180">D3</text>
 <text x="17.907" y="39.624" size="1.27" layer="21" rot="R270">GND</text>
 <text x="33.655" y="30.988" size="1.27" layer="21" rot="R180">DRIVE OUT</text>
-<text x="24.511" y="62.23" size="0.8128" layer="22" rot="MR180">   SWITCH
-360-1013-ND</text>
 <text x="19.558" y="4.191" size="1.27" layer="21" rot="R90">GND</text>
 <text x="10.033" y="3.556" size="1.27" layer="21" rot="R90">12</text>
-<text x="39.497" y="12.065" size="1.27" layer="21" rot="R270">277-6354-ND</text>
 <text x="12.192" y="40.64" size="1.27" layer="21" rot="R270">277-6354-ND</text>
 <text x="26.416" y="33.02" size="1.27" layer="21" rot="R180">D5</text>
 <text x="9.906" y="24.13" size="1.27" layer="21" rot="R180">D5</text>
@@ -219,14 +212,7 @@ PTV09A-4030U-B203-ND</text>
 <wire x1="48.26" y1="1.27" x2="38.1" y2="1.27" width="0.508" layer="21"/>
 <wire x1="38.1" y1="1.27" x2="38.1" y2="4.445" width="0.508" layer="21"/>
 <text x="29.591" y="55.245" size="0.8128" layer="21" rot="R180">SWITCH</text>
-<text x="12.065" y="59.182" size="1.016" layer="22" rot="MR180">Button
-P8083SCT-ND</text>
 <text x="39.37" y="59.182" size="1.016" layer="21" rot="R180">Button</text>
-<text x="7.239" y="6.858" size="1.27" layer="22" rot="MR180">TSW-105-25-G-S</text>
-<text x="38.989" y="4.318" size="1.27" layer="22" rot="MR180">TSW-102-25-G-S</text>
-<text x="39.624" y="57.023" size="1.27" layer="22" rot="MR180">TSW-104-25-G-S</text>
-<text x="0.889" y="60.198" size="1.27" layer="22" rot="MR180">TSW-103-25-G-S</text>
-<text x="-0.508" y="7.874" size="1.27" layer="22" rot="MR90">1568-1413-ND</text>
 <text x="18.796" y="19.05" size="1.27" layer="21" rot="R180">IRLML0060</text>
 </plain>
 <libraries>

@@ -57,5 +57,22 @@
         "replicator.txt",
         "text2php.txt",
         "upload.txt"
+    ],
+    "boardfiles": [
+        "dual-h-bridge-gerbers-pcbwayconversion.zip",
+        "dualHbridge-v5.brd",
+        "dualHbridge-v5.sch",
+        "dualHbridge-v5_2019-11-17.zip",
+        "dualHbridge-v5_2019-11-18.zip",
+        "dualHbridge-v5bom.xlsx",
+        "dualhbridge.png",
+        "spietz-library.lbr",
+        "unoshield-gerbers-pcbwayconversion.zip",
+        "unoshield-v5-bom.xlsx",
+        "unoshield-v5.brd",
+        "unoshield-v5.sch",
+        "unoshield-v5_2019-11-17.zip",
+        "unoshield-v5_2019-11-18.zip",
+        "unoshield.png"
     ]
 }

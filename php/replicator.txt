@@ -2,7 +2,7 @@
 
 $makesymbol = true;
 
-$dnaurl = "https://raw.githubusercontent.com/LafeLabs/thing/master/data/dna.txt";
+$dnaurl = "https://raw.githubusercontent.com/LafeLabs/trashrobot5/master/data/dna.txt";
 $baseurl = explode("data/",$dnaurl)[0];
 $dnaraw = file_get_contents($dnaurl);
 $dna = json_decode($dnaraw);
@@ -12,6 +12,7 @@ mkdir("data");
 mkdir("php");
 mkdir("jscode");
 mkdir("uploadimages");
+mkdir("boards");
 
 if($makesymbol){
     mkdir("symbol");
@@ -50,6 +51,10 @@ foreach($dna->javascript as $value){
 
 foreach($dna->iconsymbols as $value){
     copy($baseurl."iconsymbols/".$value,"iconsymbols/".$value);
+}
+
+foreach($dna->boardfiles as $value){
+    copy($baseurl."boards/".$value,"boards/".$value);
 }
 
 
