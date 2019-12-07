@@ -96,6 +96,41 @@
 - [boards/dualHbridge-v5.sch](boards/dualHbridge-v5.sch)
 - [boards/dualHbridge-v5bom.xlsx](boards/dualHbridge-v5bom.xlsx)
 
+### Cables:
+
+- 4 conductor, 8 inches long, header to stripped and tinned ends with 1/4 inch stripping: [IDSS-04-S-08.00-ST4](https://www.samtec.com/products/idss-04-s-08.00-st4)
+- 3 conductor, 8 inches long, header to stripped and tinned ends, with 1/4 inch stripping: [https://www.samtec.com/products/idss-03-s-08.00-st4](https://www.samtec.com/products/idss-03-s-08.00-st4)
+
+
+# 90 degree terminal strips for dual h bridge:
+
+5 pin:
+TSW-105-25-G-S-RA	
+
+![](http://www.hammondbranch.org/trashrobot/uploadimages/image4.PNG)
+
+
+4 pin:
+
+TSW-104-25-G-S-RA
+
+
+## 5 wire cable from shield to dual h bridge:
+
+idss-05-d-06.00
+
+![](http://www.hammondbranch.org/trashrobot/uploadimages/image1.PNG)
+
+## 4 wire cable to solder stripped ends for stepper motor and also I2C sensors(need as many of these as stepper motors plus I2 C sensors.):
+
+IDSS-04-S-08.00-T	(8 inches)
+
+![](http://www.hammondbranch.org/trashrobot/uploadimages/image2.PNG)
+
+## 3 wire cable with solder tinned ends for neopixels, 8 inch:
+
+IDSS-03-S-08.00-T
+
 
 
 
