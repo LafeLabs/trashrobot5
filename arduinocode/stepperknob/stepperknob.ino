@@ -24,31 +24,24 @@ void setup() {
   digitalWrite(pinArray[1],LOW);
   digitalWrite(pinArray[2],LOW);
   digitalWrite(pinArray[3],LOW);
-  knob = analogRead(A2);  
-  x = knob;
+  x = 0;
 }
 
 void loop() {
-  knob = analogRead(A2);  
 
-  if(abs(x - knob) > 5){
-     if(x > knob){
-        x = x - 5;
-     }
-     else{
-        x = x + 5;
-     }
+  for(x=0;x<20;x++){
      digitalWrite(pinArray[x%4],HIGH);
      delay(pulseTime);
      digitalWrite(pinArray[x%4],LOW);
+     delay(pulseTime);    
+  }
+
+  for(x=20;x>0;x--){
+     digitalWrite(pinArray[x%4],HIGH);
      delay(pulseTime);
-     Serial.println(pinArray[x%4]);  
+     digitalWrite(pinArray[x%4],LOW);
+     delay(pulseTime);    
   }
  
- //    Serial.println(knob); 
- 
-  //Serial.print(","); 
-  //Serial.println(x); 
-  //delay(20);
   
 }

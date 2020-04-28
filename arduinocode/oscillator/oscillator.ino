@@ -11,7 +11,7 @@ OSCILLATOR
 int feedback = 0;
 int x = 512;
 int x0 = 512;
-int drivePin  = 5;
+int drivePin  = 7;
 
 void setup() {
   Serial.begin(115200);

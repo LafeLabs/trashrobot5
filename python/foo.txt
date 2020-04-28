@@ -1,0 +1,12 @@
+move left 100
+move in 100
+move right 100
+move out 100
+move left 400
+move in 400
+move right 400
+move out 400
+move left 1600
+move in 1600
+move right 1600
+move out 1600

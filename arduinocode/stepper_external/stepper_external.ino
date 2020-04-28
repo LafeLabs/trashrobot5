@@ -4,8 +4,10 @@
 FREE, PUBLIC DOMAIN
 NO COPYRIGHT
 
-STEPPER BUTTON DRIVE
+STEPPER EXTERNAL DRIVE, NO PULL UP
 
+
+need to combine this with button, just use different pins!
 */
 
 
@@ -23,8 +25,8 @@ int x = 512;
 
 void setup() {
   Serial.begin(115200);
-  pinMode(button1pin,INPUT_PULLUP); 
-  pinMode(button2pin,INPUT_PULLUP); 
+  pinMode(button1pin,INPUT); 
+  pinMode(button2pin,INPUT); 
   pinMode(pinArray[0],OUTPUT);
   pinMode(pinArray[1],OUTPUT); 
   pinMode(pinArray[2],OUTPUT); 
