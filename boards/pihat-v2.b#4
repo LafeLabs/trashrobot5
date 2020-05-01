@@ -178,7 +178,7 @@
 <text x="38.862" y="42.926" size="1.27" layer="21">MOTOR1</text>
 <text x="21.59" y="42.926" size="1.27" layer="21">MOTOR2</text>
 <text x="3.81" y="42.926" size="1.27" layer="21">MOTOR3</text>
-<text x="19.304" y="17.018" size="1.27" layer="21">lafelabs/trashrobot5/boards/pihat-v2</text>
+<text x="13.97" y="16.764" size="1.27" layer="21">github/lafelabs/trashrobot5/boards/pihat-v2</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">
