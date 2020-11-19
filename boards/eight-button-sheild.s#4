@@ -643,7 +643,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SW6" library="spietz-library" deviceset="BUTTON" device=""/>
 <part name="SW7" library="spietz-library" deviceset="BUTTON" device=""/>
 <part name="SW8" library="spietz-library" deviceset="BUTTON" device=""/>
-<part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -662,11 +661,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="SW6" gate="G$1" x="177.8" y="83.82"/>
 <instance part="SW7" gate="G$1" x="189.23" y="81.28"/>
 <instance part="SW8" gate="G$1" x="200.66" y="78.74"/>
-<instance part="GND1" gate="1" x="81.28" y="68.58"/>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="N$9" class="0">
+<segment>
+<pinref part="J4" gate="G$1" pin="GND@1"/>
+<pinref part="J4" gate="G$1" pin="GND@0"/>
+<wire x1="81.28" y1="71.12" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
+<junction x="81.28" y="73.66"/>
+<pinref part="J4" gate="G$1" pin="GND@2"/>
+<wire x1="81.28" y1="76.2" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="*D5"/>
@@ -758,16 +766,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="128.27" y1="73.66" x2="138.43" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="128.27" y1="63.5" x2="128.27" y2="73.66" width="0.1524" layer="91"/>
 <junction x="128.27" y="73.66"/>
-</segment>
-<segment>
-<pinref part="J4" gate="G$1" pin="GND@1"/>
-<pinref part="J4" gate="G$1" pin="GND@0"/>
-<wire x1="81.28" y1="71.12" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
-<junction x="81.28" y="73.66"/>
-<pinref part="J4" gate="G$1" pin="GND@2"/>
-<wire x1="81.28" y1="76.2" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<junction x="81.28" y="71.12"/>
 </segment>
 </net>
 </nets>
