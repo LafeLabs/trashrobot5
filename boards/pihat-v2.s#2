@@ -3395,8 +3395,6 @@ part number 2062-2P from STA</description>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="12V" device=""/>
 <part name="IC3" library="pololu-stepper-driver" deviceset="2967-MP6500" device=""/>
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="12V" device=""/>
-<part name="U$1" library="spietz-library-2" deviceset="BUTTON" device=""/>
-<part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3501,10 +3499,6 @@ part number 2062-2P from STA</description>
 <instance part="SUPPLY4" gate="G$1" x="137.16" y="163.83" smashed="yes">
 <attribute name="VALUE" x="137.16" y="166.624" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="U$1" gate="G$1" x="91.44" y="81.28" smashed="yes"/>
-<instance part="GND3" gate="1" x="91.44" y="78.74" smashed="yes">
-<attribute name="VALUE" x="91.44" y="78.486" size="1.778" layer="96" align="top-center"/>
-</instance>
 </instances>
 <busses>
 </busses>
@@ -3585,10 +3579,6 @@ part number 2062-2P from STA</description>
 <segment>
 <pinref part="IC3" gate="G$1" pin="GND2"/>
 <pinref part="GND15" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="P$2"/>
-<pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="GO-GPIO2" class="0">
@@ -3785,14 +3775,11 @@ part number 2062-2P from STA</description>
 <label x="69.85" y="63.5" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
-<net name="STOP" class="0">
+<net name="D4" class="0">
 <segment>
 <pinref part="J10" gate="G$1" pin="GP4"/>
 <wire x1="67.31" y1="81.28" x2="69.85" y2="81.28" width="0.1524" layer="91"/>
 <label x="69.85" y="81.28" size="1.27" layer="95" font="vector" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="P$1"/>
-<wire x1="78.74" y1="81.28" x2="67.31" y2="81.28" width="0.1524" layer="91"/>
-<junction x="67.31" y="81.28"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -3824,6 +3811,11 @@ part number 2062-2P from STA</description>
 </segment>
 </net>
 <net name="EN2" class="0">
+<segment>
+<pinref part="J10" gate="G$1" pin="ID_SC"/>
+<wire x1="67.31" y1="55.88" x2="69.85" y2="55.88" width="0.1524" layer="91"/>
+<label x="69.85" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
 <segment>
 <wire x1="111.76" y1="163.83" x2="86.36" y2="163.83" width="0.1524" layer="91"/>
 <label x="86.36" y="163.83" size="1.778" layer="95"/>
@@ -4028,13 +4020,6 @@ part number 2062-2P from STA</description>
 <segment>
 <pinref part="J10" gate="G$1" pin="5V@4"/>
 <wire x1="36.83" y1="109.22" x2="34.29" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="GPIO1" class="0">
-<segment>
-<pinref part="J10" gate="G$1" pin="ID_SC"/>
-<wire x1="67.31" y1="55.88" x2="69.85" y2="55.88" width="0.1524" layer="91"/>
-<label x="69.85" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 </nets>

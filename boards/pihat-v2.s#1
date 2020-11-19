@@ -3825,6 +3825,11 @@ part number 2062-2P from STA</description>
 </net>
 <net name="EN2" class="0">
 <segment>
+<pinref part="J10" gate="G$1" pin="ID_SC"/>
+<wire x1="67.31" y1="55.88" x2="69.85" y2="55.88" width="0.1524" layer="91"/>
+<label x="69.85" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
 <wire x1="111.76" y1="163.83" x2="86.36" y2="163.83" width="0.1524" layer="91"/>
 <label x="86.36" y="163.83" size="1.778" layer="95"/>
 <pinref part="IC3" gate="G$1" pin="!ENBL"/>
@@ -4028,13 +4033,6 @@ part number 2062-2P from STA</description>
 <segment>
 <pinref part="J10" gate="G$1" pin="5V@4"/>
 <wire x1="36.83" y1="109.22" x2="34.29" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="GPIO1" class="0">
-<segment>
-<pinref part="J10" gate="G$1" pin="ID_SC"/>
-<wire x1="67.31" y1="55.88" x2="69.85" y2="55.88" width="0.1524" layer="91"/>
-<label x="69.85" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 </nets>
