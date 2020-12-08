@@ -185,6 +185,7 @@
 <text x="16.002" y="7.112" size="1.016" layer="21" rot="R45">EN2</text>
 <text x="11.43" y="7.62" size="1.016" layer="21" rot="R45">STEP2</text>
 <text x="6.858" y="7.62" size="1.016" layer="21" rot="R45">DIR2</text>
+<text x="29.972" y="54.61" size="1.27" layer="21" rot="R180">trashrobot5-arduino-xyz-stepper</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">
@@ -673,15 +674,6 @@ design rules under a new name.</description>
 <contactref element="J4" pad="GND@1"/>
 <contactref element="J4" pad="GND@0"/>
 <contactref element="J4" pad="GND@2"/>
-<wire x1="64.77" y1="18.288" x2="64.77" y2="3.048" width="0" layer="19" extent="1-1"/>
-<wire x1="25.146" y1="50.8" x2="64.77" y2="18.288" width="0" layer="19" extent="1-1"/>
-<wire x1="22.606" y1="50.8" x2="25.146" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="64.516" y1="49.276" x2="22.606" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="64.516" y1="34.036" x2="64.516" y2="49.276" width="0" layer="19" extent="1-1"/>
-<wire x1="34.29" y1="18.288" x2="64.516" y2="49.276" width="0" layer="19" extent="1-1"/>
-<wire x1="34.29" y1="33.528" x2="34.29" y2="18.288" width="0" layer="19" extent="1-1"/>
-<wire x1="39.116" y1="2.54" x2="34.29" y2="33.528" width="0" layer="19" extent="1-1"/>
-<wire x1="72.39" y1="53.848" x2="39.116" y2="2.54" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$30">
 </signal>

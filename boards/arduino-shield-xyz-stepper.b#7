@@ -181,6 +181,10 @@
 <text x="16.51" y="50.292" size="1.016" layer="21" rot="R270">EN3</text>
 <text x="18.796" y="44.958" size="1.016" layer="21" rot="R180">STEP3</text>
 <text x="13.208" y="42.418" size="1.016" layer="21">DIR3</text>
+<text x="20.828" y="46.482" size="1.016" layer="21" rot="R180">EN3</text>
+<text x="16.002" y="7.112" size="1.016" layer="21" rot="R45">EN2</text>
+<text x="11.43" y="7.62" size="1.016" layer="21" rot="R45">STEP2</text>
+<text x="6.858" y="7.62" size="1.016" layer="21" rot="R45">DIR2</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">

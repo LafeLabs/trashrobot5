@@ -185,6 +185,7 @@
 <text x="16.002" y="7.112" size="1.016" layer="21" rot="R45">EN2</text>
 <text x="11.43" y="7.62" size="1.016" layer="21" rot="R45">STEP2</text>
 <text x="6.858" y="7.62" size="1.016" layer="21" rot="R45">DIR2</text>
+<text x="42.164" y="54.61" size="1.27" layer="21" rot="R180">trashrobot5-arduino-xyz-stepper november 2020</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">
