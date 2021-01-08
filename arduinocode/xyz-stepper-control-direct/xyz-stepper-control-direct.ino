@@ -81,10 +81,11 @@ void loop() {
   zdownBool = !digitalRead(zdownPin);
   zupBool = !digitalRead(zupPin);
   goBool = !digitalRead(goPin);
+  stopBool = !digitalRead(stopPin);
   
    //Serial.println(goBool); 
   if(goBool){
-     geometronSequence("AAACCC");
+     geometronSequence("GCAAAHAAHAHAHAHAHADEDECCFCCFCCFCFCFCFCFCFCAAAAAAAAAAAAAAAAAAHBDFDFDDFDDFDFDDFDDFDDFDDFDFDCCCFCCCFCCFCFCBDEDDDEDDDDFDDDFDFDFDBBHBBBGBBBGBGBGBGBGBGBCCBDDEDDEDDEDDEDEDEDEDEDAHAAAAAAGAAHBDFDDFDDFDDFDHBGBCFCFCCFCCFCFCCFCCFCCFCCFCFCCFCCFCFCCFCCFCCFCGBCFCCFCFCCFCAAAAAAAAAAAAAAAHBHBDFDDDDDDDDDDEDDEDDEDEDCCCCFCCCCCECCECCECAAGAGGGGGGGAAAAAAGAAGAGACECCCCCFCCFCFCFCBBBBBBBHBBHBDFDDDDDDDEDDEDAHAGGGGGEEEEHGAGACCFCGBBBHBHBDDEDEDAAEEEEEEEEEEDDDDAAAACCCCCCCCCCAAAAACCCCBBBBBBBBBDDDDDDDDDDFFFFFFFFFFFFFFFFFFFFFFBDFDDDBBBBBBCCFCCFCCCFCCCFCCFCCAAAAAHAHAAAGAECAAAADDFDDDFDDDFDGGGGFFBBBDDDEDECCCEEEEEEEEEEEEEHHHHHHHHHHHHHHHHH");
   }
 
   if(xleftBool){
@@ -219,7 +220,7 @@ void moveTowards(int nSteps){
 
 
 void geometronAction(char action){
-
+  stopBool = !digitalRead(stopPin);
   if(action == 'a'){
      moveRight(side);
   }
@@ -275,6 +276,8 @@ void geometronSequence(String glyph){
    //for loop thru the String
    int index = 0;
    for(index = 0;index < glyph.length();index++){
-      geometronAction(glyph.charAt(index));
+    if(!stopBool){
+      geometronAction(glyph.charAt(index));      
+    }
    }
 }
