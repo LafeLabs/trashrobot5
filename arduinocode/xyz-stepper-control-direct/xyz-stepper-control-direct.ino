@@ -2,14 +2,19 @@
 
 int delayus = 500;//delayMicroseconds(delayus);
 
-//these are the pin numbers of the buttons on the controller.  Connect to ground to activate.
-int xleftPin = 7;
-int xrightPin = 8;
-int yawayPin = 9;
-int ytowardsPin = 10;
-int zdownPin = 11;
-int zupPin = 12;
+int unit = 100;
+int side = unit;
 
+//these are the pin numbers of the buttons on the controller.  Connect to ground to activate.
+int xleftPin = 10;
+int xrightPin = 7;
+int yawayPin = 8;
+int ytowardsPin = 9;
+int zdownPin = 6;
+int zupPin = 5;
+
+int goPin = 11;
+int stopPin = 12;
 
 //connect these pins to the MP6500 stepper motor control board:
 int dirPin3 = 19;
@@ -28,6 +33,9 @@ boolean yawayBool = false;
 boolean ytowardsBool = false;
 boolean zdownBool = false;
 boolean zupBool = false;
+boolean goBool = false;
+boolean stopBool = false;
+
 
 void setup() {
 
@@ -37,6 +45,8 @@ void setup() {
     pinMode(ytowardsPin,INPUT_PULLUP); 
     pinMode(zdownPin,INPUT_PULLUP); 
     pinMode(zupPin,INPUT_PULLUP); 
+    pinMode(goPin,INPUT_PULLUP); 
+    pinMode(stopPin,INPUT_PULLUP); 
 
     pinMode(dirPin1,OUTPUT);
     pinMode(stepPin1,OUTPUT);
@@ -70,7 +80,12 @@ void loop() {
   ytowardsBool = !digitalRead(ytowardsPin);
   zdownBool = !digitalRead(zdownPin);
   zupBool = !digitalRead(zupPin);
+  goBool = !digitalRead(goPin);
+  
    //Serial.println(goBool); 
+  if(goBool){
+     geometronSequence("AAACCC");
+  }
 
   if(xleftBool){
      moveLeft(1);
@@ -95,53 +110,85 @@ void loop() {
 void moveLeft(int nSteps){
      digitalWrite(dirPin1,LOW);
      digitalWrite(enPin1,LOW);
+     digitalWrite(dirPin3,HIGH);
+     digitalWrite(enPin3,LOW);
      
      for(int index = 0;index < nSteps;index++){
        digitalWrite(stepPin1,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin1,LOW);
        delayMicroseconds(delayus); 
+       digitalWrite(stepPin3,HIGH);
+       delayMicroseconds(delayus); 
+       digitalWrite(stepPin3,LOW);
+       delayMicroseconds(delayus); 
+
      }          
      digitalWrite(enPin1,HIGH);   
+     digitalWrite(enPin2,HIGH);   
 }
 
 void moveRight(int nSteps){
      digitalWrite(dirPin1,HIGH);
      digitalWrite(enPin1,LOW);
+     digitalWrite(dirPin3,LOW);
+     digitalWrite(enPin3,LOW);
+    
+     for(int index = 0;index < nSteps;index++){
+       digitalWrite(stepPin1,HIGH);
+       delayMicroseconds(delayus); 
+       digitalWrite(stepPin1,LOW);
+       delayMicroseconds(delayus); 
+       digitalWrite(stepPin3,HIGH);
+       delayMicroseconds(delayus); 
+       digitalWrite(stepPin3,LOW);
+       delayMicroseconds(delayus); 
+
+     }          
+     digitalWrite(enPin1,HIGH);   
+     digitalWrite(enPin3,HIGH);   
+
+}
+
+void moveDown(int nSteps){
+     digitalWrite(dirPin1,HIGH);
+     digitalWrite(enPin1,LOW);
+     digitalWrite(dirPin3,HIGH);
+     digitalWrite(enPin3,LOW);
      
      for(int index = 0;index < nSteps;index++){
        digitalWrite(stepPin1,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin1,LOW);
        delayMicroseconds(delayus); 
-     }          
-     digitalWrite(enPin1,HIGH);   
-}
-
-void moveDown(int nSteps){
-      digitalWrite(dirPin3,LOW);
-     digitalWrite(enPin3,LOW);
-     
-     for(int index = 0;index < nSteps;index++){
        digitalWrite(stepPin3,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin3,LOW);
        delayMicroseconds(delayus); 
      }          
      digitalWrite(enPin1,HIGH);   
+     digitalWrite(enPin3,HIGH);   
+
 }
 
 void moveUp(int nSteps){
-     digitalWrite(dirPin3,HIGH);
-     digitalWrite(enPin3,LOW);
-     
+     digitalWrite(dirPin1,LOW);
+     digitalWrite(enPin1,LOW);
+     digitalWrite(dirPin3,LOW);
+     digitalWrite(enPin3,LOW);     
      for(int index = 0;index < nSteps;index++){
+       digitalWrite(stepPin1,HIGH);
+       delayMicroseconds(delayus); 
+       digitalWrite(stepPin1,LOW);
+       delayMicroseconds(delayus); 
        digitalWrite(stepPin3,HIGH);
        delayMicroseconds(delayus); 
        digitalWrite(stepPin3,LOW);
        delayMicroseconds(delayus); 
      }          
      digitalWrite(enPin3,HIGH);    
+     digitalWrite(enPin1,HIGH);
+
 }
 
 void moveAway(int nSteps){
@@ -168,4 +215,66 @@ void moveTowards(int nSteps){
        delayMicroseconds(delayus); 
      }          
      digitalWrite(enPin2,HIGH);   
+}
+
+
+void geometronAction(char action){
+
+  if(action == 'a'){
+     moveRight(side);
+  }
+  if(action == 'b'){
+     moveLeft(side);
+  }
+  if(action == 'c'){
+    moveAway(side);
+  }
+  if(action == 'd'){
+    moveTowards(side);
+  }
+  if(action == 'e'){
+    moveUp(side);
+  }
+  if(action == 'f'){
+    moveDown(side);
+  }
+  if(action == 'g'){
+    side /= 2;
+  }
+  if(action == 'h'){
+    side *= 2;
+  }
+  if(action == 'A'){
+    geometronSequence("ggahhef");
+  }
+  if(action == 'B'){
+    geometronSequence("ggbhhef");
+  }
+  if(action == 'C'){
+    geometronSequence("ggchhef");
+  }
+  if(action == 'D'){
+    geometronSequence("ggdhhef");
+  }
+  if(action == 'E'){
+    geometronSequence("ggahh");
+  }
+  if(action == 'F'){
+    geometronSequence("ggbhh");
+  }
+  if(action == 'G'){
+    geometronSequence("ggchh");
+  }
+  if(action == 'H'){
+    geometronSequence("ggdhh");
+  }
+
+}
+
+void geometronSequence(String glyph){
+   //for loop thru the String
+   int index = 0;
+   for(index = 0;index < glyph.length();index++){
+      geometronAction(glyph.charAt(index));
+   }
 }
