@@ -1,9 +1,31 @@
+String symbol0 = "A";
+String symbol1 = "B";
+String symbol2 = "C";
+String symbol3 = "D";
+String symbol4 = "AAA";
+String symbol5 = "BBB";
+String symbol6 = "CCC";
+String symbol7 = "DDD";
+
+
 
 
 int delayus = 500;//delayMicroseconds(delayus);
 
 int unit = 100;
 int side = unit;
+
+int x = 0;
+
+int x7 = 110;
+int x6 = 222;
+int x5 = 333;
+int x4 = 444;
+int x3 = 555;
+int x2 = 668;
+int x1 = 784;
+int x0 = 902;
+int delta = 10;
 
 //these are the pin numbers of the buttons on the controller.  Connect to ground to activate.
 int xleftPin = 10;
@@ -22,7 +44,9 @@ int stepPin3 = 18;
 int enPin3 = 17;
 int dirPin1 = 16;
 int stepPin1 = 15;
-int enPin1 = 14;
+
+int enPin1 = 13;
+
 int dirPin2 = 2;
 int stepPin2 = 3;
 int enPin2 = 4;
@@ -36,8 +60,11 @@ boolean zupBool = false;
 boolean goBool = false;
 boolean stopBool = false;
 
+int select = 0;
 
 void setup() {
+    x = analogRead(A0);
+    Serial.begin(9600);
 
     pinMode(xleftPin,INPUT_PULLUP); 
     pinMode(xrightPin,INPUT_PULLUP); 
@@ -73,7 +100,40 @@ void setup() {
 }
 
 void loop() { 
+
+  x = analogRead(A0);
+
+  if(x > x0 - delta && x < x0 + delta){
+    select = 0;
+  }
+  if(x > x1 - delta && x < x1 + delta){
+    select = 1;
+  }
+  if(x > x2 - delta && x < x2 + delta){
+    select = 2;
+  }
+  if(x > x3 - delta && x < x3 + delta){
+    select = 3;
+  }
+  if(x > x4 - delta && x < x4 + delta){
+    select = 4;
+  }
+  if(x > x5 - delta && x < x5 + delta){
+    select = 5;
+  }
+  if(x > x6 - delta && x < x6 + delta){
+    select = 6;
+  }
+  if(x > x7 - delta && x < x7 + delta){
+    select = 7;
+  }
+  if(x<50){
+    select = -1;
+  }
+
   
+   Serial.println(select); 
+
   xleftBool = !digitalRead(xleftPin);
   xrightBool = !digitalRead(xrightPin);
   yawayBool = !digitalRead(yawayPin);
@@ -85,7 +145,33 @@ void loop() {
   
    //Serial.println(goBool); 
   if(goBool){
-     geometronSequence("HHHHHHHHHBBBBGBBCCCFCCCCCCFCCFCBCAAAAAAAAAAAAAAAAAAAADBFDDFDDDDDDFDDDDBHBBBBBHHHHHHDAAACCCAAAAAGAGACCECCCCCCCCCECECECACCCCCCCBBBBBBBBBBBBCCCBBBBBBDDDBBBBBBBBBBBBDDDDDDDAEDEDEDDDDDDDDDEDDDEDEDAAAAADDDAA");
+    if(select == 0){
+      geometronSequence(symbol0);
+    }
+    if(select == 1){
+      geometronSequence(symbol1);
+    }
+    if(select == 2){
+      geometronSequence(symbol2);
+    }
+    if(select == 3){
+      geometronSequence(symbol3);
+    }
+    if(select == 4){
+      geometronSequence(symbol4);
+    }
+    if(select == 5){
+      geometronSequence(symbol5);
+    }
+    if(select == 6){
+      geometronSequence(symbol6);
+    }
+    if(select == 7){
+      geometronSequence(symbol7);
+    }
+
+
+    
   }
 
   if(xleftBool){
