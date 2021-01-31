@@ -1,31 +1,10 @@
 
-//String coin = "AAAAAAAAACCCCCC"; 
-
-String symbol0 = "aef";
-String symbol1 = "0000";
-String symbol2 = "cbbbb";
-String symbol3 = "12121212";
-String symbol4 = "dddd";
-String symbol5 = "34";
-String symbol6 = "";
-String symbol7 = "CAAAADDEDDDDDEDDDDBDBBBBBBBBBBBBBBBBBHBHBHAHAAAAAAAAAAAAAAAAAHAACECCCCCCFGGCCFGGGCCCCCCBHBBBBBBBBBBGBBBBBHBHBAAAAAAAHAAAAAHDDDEDDDDDDDACCCCCCCFCCCFFFFBDDDDEDDDDDDBCCCCFCCCCFCCCFFBDDDDDEDDDDDDBBCCCCCC";
+char coin[] = "CAAAADDEDDDDDEDDDDBDBBBBBBBBBBBBBBBBBHBHBHAHAAAAAAAAAAAAAAAAAHAACECCCCCCFGGCCFGGGCCCCCCBHBBBBBBBBBBGBBBBBHBHBAAAAAAAHAAAAAHDDDEDDDDDDDACCCCCCCFCCCFFFFBDDDDEDDDDDDBCCCCFCCCCFCCCFFBDDDDDEDDDDDDBBCCCCCCCCFCCCCEEEEEEEEEEEEEEEEEHHHAAHAAAACCCCFCCCCCECDDDEDDDDDDDDEDDDDDDEDDDDDEDDDDBDBDBCCCCCCCCCCFCCCCCCCHHHBBGBGBGBEEEEEEEEHHEHDEDEDAHAAHAAADDDFDDBFCCFCCBGBGBCGGGGGGGBCCECECECAAGADDDFDDBDBDBBGGGGGGGGGGGGGGGGGGGCCCCHBHBHBHBHBDDAAAGAGACFFFFFFFFFFFFFFGGGGGFGCDDDADDADDDADDBDDBBGBGBGBGBGBBDBDBDBBBBCBBDDDDDBDDBDDDDDBDDDBDDDDDBDDDDDDDDDDDDDDDDDDDBCBCCBCCCBCCCBCCCBCCACCCACCACCCACCCACCACCACCACCCACCCCCCCCCCBCCCCCAACADDDDDDDDDDAAAAACAACAAAADAAACCCBCC";
 
 int delayus = 500;//delayMicroseconds(delayus);
 
 int unit = 100;
 int side = unit;
-
-int x = 0;
-
-int x7 = 110;
-int x6 = 222;
-int x5 = 333;
-int x4 = 444;
-int x3 = 555;
-int x2 = 668;
-int x1 = 784;
-int x0 = 902;
-int delta = 10;
 
 //these are the pin numbers of the buttons on the controller.  Connect to ground to activate.
 int xleftPin = 10;
@@ -64,9 +43,6 @@ int select = 0;
 
 void setup() {
 
-    x = analogRead(A0);
-    Serial.begin(9600);
-
     pinMode(xleftPin,INPUT_PULLUP); 
     pinMode(xrightPin,INPUT_PULLUP); 
     pinMode(yawayPin,INPUT_PULLUP); 
@@ -101,40 +77,8 @@ void setup() {
 }
 
 void loop() { 
-
-  x = analogRead(A0);
-
-  if(x > x0 - delta && x < x0 + delta){
-    select = 0;
-  }
-  if(x > x1 - delta && x < x1 + delta){
-    select = 1;
-  }
-  if(x > x2 - delta && x < x2 + delta){
-    select = 2;
-  }
-  if(x > x3 - delta && x < x3 + delta){
-    select = 3;
-  }
-  if(x > x4 - delta && x < x4 + delta){
-    select = 4;
-  }
-  if(x > x5 - delta && x < x5 + delta){
-    select = 5;
-  }
-  if(x > x6 - delta && x < x6 + delta){
-    select = 6;
-  }
-  if(x > x7 - delta && x < x7 + delta){
-    select = 7;
-  }
-  if(x<50){
-    select = -1;
-  }
-
   
-   Serial.println(select); 
-
+  
   xleftBool = !digitalRead(xleftPin);
   xrightBool = !digitalRead(xrightPin);
   yawayBool = !digitalRead(yawayPin);
@@ -146,33 +90,7 @@ void loop() {
   
    //Serial.println(goBool); 
   if(goBool){
-    if(select == 0){
-      geometronSequence(symbol0);
-    }
-    if(select == 1){
-      geometronSequence(symbol1);
-    }
-    if(select == 2){
-      geometronSequence(symbol2);
-    }
-    if(select == 3){
-      geometronSequence(symbol3);
-    }
-    if(select == 4){
-      geometronSequence(symbol4);
-    }
-    if(select == 5){
-      geometronSequence(symbol5);
-    }
-    if(select == 6){
-      geometronSequence(symbol6);
-    }
-    if(select == 7){
-      geometronSequence(symbol7);
-    }
-
-
-    
+      printCoin(); 
   }
 
   if(xleftBool){
@@ -356,38 +274,22 @@ void geometronAction(char action){
   if(action == 'H'){
     geometronSequence("ggahh");
   }
-
-  if(action == '0'){
-    geometronSequence(symbol0);
-  }
-  if(action == '1'){
-    geometronSequence(symbol1);
-  }
-  if(action == '2'){
-    geometronSequence(symbol2);
-  }
-  if(action == '3'){
-    geometronSequence(symbol3);
-  }
-  if(action == '4'){
-    geometronSequence(symbol4);
-  }
-  if(action == '5'){
-    geometronSequence(symbol5);
-  }
-  if(action == '6'){
-    geometronSequence(symbol6);
-  }
-  if(action == '7'){
-    geometronSequence(symbol7);
-  }
-
 }
 
+
+void printCoin(){
+   for(int index = 0;index <= sizeof(coin);index++){
+    if(!stopBool){
+      geometronAction(coin[index]);    
+    }
+   }  
+}
+
+
 void geometronSequence(String glyph){
-   //for loop thru the String
-   int index = 0;
-   for(index = 0;index < glyph.length();index++){
+  //for loop thru the String
+  int index = 0;
+  for(index = 0;index < glyph.length();index++){
     if(!stopBool){
       geometronAction(glyph.charAt(index));      
     }
