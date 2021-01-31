@@ -1,14 +1,13 @@
-String symbol0 = "A";
-String symbol1 = "B";
-String symbol2 = "C";
-String symbol3 = "D";
-String symbol4 = "AAA";
-String symbol5 = "BBB";
-String symbol6 = "CCC";
-String symbol7 = "DDD";
+String coin = "FFFFFFAGAGAGAGAGAGACFCCBGBBBBBBBHBHBBHBBHBBHBBBHBBBBGBCCCCCCCCCCHAHAAAAAAGAAGAAAAAGAAAHAAHAAHAHAHAHADEDAGAGAGAGAGAECAGAAGAAAAAAHAAHAHADBBHBBHBBHBHBHBHBHBHBHBHBHBHBBHBHBHBHBHBHBAAAHAAAHAHAAHAACECCECCAGAAAAAAAHAADBDBDFDDFDDDDDFDDBBHBBBGBBCCCCFCBGBBGBBBGBBBBBBBHBBHBBHBHBHBHBHBHBBBHBBBBGBBBGBGBCAAGAAGAECECECECAGAGAGAGAGAGAGAAEEEEEEG";
 
-
-
+String symbol0 = "aef";
+String symbol1 = "0000";
+String symbol2 = "cbbbb";
+String symbol3 = "12121212";
+String symbol4 = "dddd";
+String symbol5 = "34";
+String symbol6 = "";
+String symbol7 = coin;
 
 int delayus = 500;//delayMicroseconds(delayus);
 
@@ -63,6 +62,7 @@ boolean stopBool = false;
 int select = 0;
 
 void setup() {
+       
     x = analogRead(A0);
     Serial.begin(9600);
 
@@ -332,28 +332,53 @@ void geometronAction(char action){
     side *= 2;
   }
   if(action == 'A'){
-    geometronSequence("ggahhef");
-  }
-  if(action == 'B'){
-    geometronSequence("ggbhhef");
-  }
-  if(action == 'C'){
-    geometronSequence("ggchhef");
-  }
-  if(action == 'D'){
     geometronSequence("ggdhhef");
   }
+  if(action == 'B'){
+    geometronSequence("ggchhef");
+  }
+  if(action == 'C'){
+    geometronSequence("ggbhhef");
+  }
+  if(action == 'D'){
+    geometronSequence("ggahhef");
+  }
   if(action == 'E'){
-    geometronSequence("ggahh");
+    geometronSequence("ggdhh");
   }
   if(action == 'F'){
-    geometronSequence("ggbhh");
-  }
-  if(action == 'G'){
     geometronSequence("ggchh");
   }
+  if(action == 'G'){
+    geometronSequence("ggbhh");
+  }
   if(action == 'H'){
-    geometronSequence("ggdhh");
+    geometronSequence("ggahh");
+  }
+
+  if(action == '0'){
+    geometronSequence(symbol0);
+  }
+  if(action == '1'){
+    geometronSequence(symbol1);
+  }
+  if(action == '2'){
+    geometronSequence(symbol2);
+  }
+  if(action == '3'){
+    geometronSequence(symbol3);
+  }
+  if(action == '4'){
+    geometronSequence(symbol4);
+  }
+  if(action == '5'){
+    geometronSequence(symbol5);
+  }
+  if(action == '6'){
+    geometronSequence(symbol6);
+  }
+  if(action == '7'){
+    geometronSequence(symbol7);
   }
 
 }

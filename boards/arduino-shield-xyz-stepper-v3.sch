@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -3984,11 +3984,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND4" gate="1" x="107.95" y="121.92" smashed="yes">
 <attribute name="VALUE" x="107.95" y="121.666" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="J6" gate="J$1" x="31.75" y="72.39"/>
+<instance part="J6" gate="J$1" x="26.67" y="72.39"/>
 <instance part="GND5" gate="1" x="39.37" y="67.31" smashed="yes">
 <attribute name="VALUE" x="39.37" y="67.056" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY8" gate="G$1" x="39.37" y="74.93"/>
+<instance part="SUPPLY8" gate="G$1" x="34.29" y="72.39" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -4043,6 +4043,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="J6" gate="J$1" pin="1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="34.29" y1="69.85" x2="39.37" y2="69.85" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STEP3" class="0">
@@ -4310,7 +4311,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="45.72" y1="100.33" x2="48.26" y2="100.33" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J6" gate="J$1" pin="3"/>
+<pinref part="J6" gate="J$1" pin="2"/>
 <pinref part="SUPPLY8" gate="G$1" pin="5V"/>
 </segment>
 </net>
@@ -4372,12 +4373,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="92.71" y1="87.63" x2="73.66" y2="87.63" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="A0" class="0">
+<net name="N$15" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="A0"/>
-<wire x1="48.26" y1="72.39" x2="39.37" y2="72.39" width="0.1524" layer="91"/>
-<label x="39.37" y="72.39" size="1.778" layer="95"/>
-<pinref part="J6" gate="J$1" pin="2"/>
+<wire x1="48.26" y1="72.39" x2="40.64" y2="72.39" width="0.1524" layer="91"/>
+<pinref part="J6" gate="J$1" pin="3"/>
+<wire x1="34.29" y1="74.93" x2="40.64" y2="74.93" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="74.93" x2="40.64" y2="72.39" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

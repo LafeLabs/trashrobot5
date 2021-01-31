@@ -3162,8 +3162,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="IC1" gate="G$1" pin="!ENBL"/>
 </segment>
 <segment>
-<pinref part="J4" gate="G$1" pin="D13"/>
-<wire x1="73.66" y1="107.95" x2="82.55" y2="107.95" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="A0"/>
+<wire x1="48.26" y1="72.39" x2="44.45" y2="72.39" width="0.1524" layer="91"/>
+<label x="45.72" y="72.39" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EN2" class="0">
@@ -3408,12 +3409,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="J4" gate="G$1" pin="*D5"/>
 <pinref part="J5" gate="J1" pin="9"/>
 <wire x1="92.71" y1="87.63" x2="73.66" y2="87.63" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="J4" gate="G$1" pin="A0"/>
-<wire x1="48.26" y1="72.39" x2="39.37" y2="72.39" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

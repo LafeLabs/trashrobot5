@@ -3225,6 +3225,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="IC3" gate="G$1" pin="VMOT"/>
 <pinref part="SUPPLY4" gate="G$1" pin="12V"/>
 </segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="VIN"/>
+<wire x1="48.26" y1="97.79" x2="45.72" y2="97.79" width="0.1524" layer="91"/>
+<label x="44.45" y="97.79" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$9" class="0">
 <segment>
@@ -3410,10 +3415,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="92.71" y1="87.63" x2="73.66" y2="87.63" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="A0" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="A0"/>
 <wire x1="48.26" y1="72.39" x2="39.37" y2="72.39" width="0.1524" layer="91"/>
+<label x="39.37" y="72.39" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
