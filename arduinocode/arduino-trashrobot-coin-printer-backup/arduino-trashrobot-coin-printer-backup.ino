@@ -8,15 +8,15 @@ int unit = 100;
 int side = unit;
 
 //these are the pin numbers of the buttons on the controller.  Connect to ground to activate.
-int xleftPin = 7;
-int xrightPin = 10;
-int yawayPin = 9;
-int ytowardsPin = 8;
-int zdownPin = 11;
-int zupPin = 12;
+int xleftPin = 10;
+int xrightPin = 7;
+int yawayPin = 8;
+int ytowardsPin = 9;
+int zdownPin = 6;
+int zupPin = 5;
 
-int goPin = 6;
-int stopPin = 5;
+int goPin = 11;
+int stopPin = 12;
 
 //connect these pins to the MP6500 stepper motor control board:
 int dirPin3 = 19;
