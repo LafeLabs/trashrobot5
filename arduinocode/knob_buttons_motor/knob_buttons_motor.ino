@@ -1,3 +1,17 @@
+//Trash Robot Code for uno shield v5
+//knob controls an analog voltage in pin A2 which ranges from 0 to 1023
+//motor is PWM controlled via a transistor from digital pin 5
+//buttons connect to ground, with internal pullup resistor from digital pins 2 and 3
+//pushing button D2 down turns motor on with speed set by knob. 
+//Knob ranges from 0 to 1023 but PWM output ranges from 0 to 255 so knob is divided by 4 to get output
+//pushing button D3 turns motor on in full power mode(PWM value = 255)
+//modify this code to create any kind of motor control or button/switch/knob activated devices
+//this code is from https://github.com/LafeLabs/trashrobot5/tree/master/arduinocode
+//no copyright of any kind. 
+//NO MONEY
+//NO MINING
+//NO PROPERTY
+//DEATH TO COPYRIGHT!!!!! INTELLECTUAL "PROPERTY" IS VIOLENCE!!!  DESTROY SILICON VALLEY!!!!
 
 int knob = 0;
 
@@ -28,7 +42,7 @@ void loop() {
     Serial.println("button 1");
   }  
   if(!button2 && button1){
-    analogWrite(motorpin,knob/4);
+    analogWrite(motorpin,255);
     Serial.println("button 2");
   }
   if(button2 && button1){
