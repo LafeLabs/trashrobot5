@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -51,11 +51,8 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="88" name="SimResults" color="9" fill="1" visible="no" active="no"/>
-<layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -83,10 +80,7 @@
 <layer number="114" name="Badge_Outline" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
-<layer number="117" name="PM_Ref" color="7" fill="1" visible="no" active="no"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="119" name="PF_Ref" color="7" fill="1" visible="no" active="no"/>
-<layer number="120" name="WFL_Ref" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -96,40 +90,15 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="no" active="no"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="133" name="bottom_silk" color="7" fill="1" visible="no" active="no"/>
-<layer number="134" name="silk_top" color="7" fill="1" visible="no" active="no"/>
-<layer number="135" name="silk_bottom" color="7" fill="1" visible="no" active="no"/>
-<layer number="136" name="silktop" color="7" fill="1" visible="no" active="no"/>
-<layer number="137" name="silkbottom" color="7" fill="1" visible="no" active="no"/>
-<layer number="138" name="EEE" color="7" fill="1" visible="no" active="no"/>
-<layer number="139" name="_tKeepout" color="7" fill="1" visible="no" active="no"/>
-<layer number="140" name="mbKeepout" color="7" fill="1" visible="no" active="no"/>
-<layer number="141" name="ASSEMBLY_TOP" color="7" fill="1" visible="no" active="no"/>
-<layer number="142" name="mbRestrict" color="7" fill="1" visible="no" active="no"/>
-<layer number="143" name="PLACE_BOUND_TOP" color="7" fill="1" visible="no" active="no"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="no" active="no"/>
-<layer number="146" name="DrillLegend_01-20" color="7" fill="1" visible="no" active="no"/>
-<layer number="147" name="PIN_NUMBER" color="7" fill="1" visible="no" active="no"/>
-<layer number="148" name="DrillLegend_01-20" color="7" fill="1" visible="no" active="no"/>
-<layer number="149" name="DrillLegend_02-15" color="7" fill="1" visible="no" active="no"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="166" name="AntennaArea" color="7" fill="1" visible="no" active="no"/>
-<layer number="168" name="4mmHeightArea" color="7" fill="1" visible="no" active="no"/>
-<layer number="191" name="mNets" color="7" fill="1" visible="no" active="no"/>
-<layer number="192" name="mBusses" color="7" fill="1" visible="no" active="no"/>
-<layer number="193" name="mPins" color="7" fill="1" visible="no" active="no"/>
-<layer number="194" name="mSymbols" color="7" fill="1" visible="no" active="no"/>
-<layer number="195" name="mNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="196" name="mValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="10" visible="yes" active="yes"/>
@@ -169,7 +138,6 @@
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
-<layer number="253" name="Extra" color="7" fill="1" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
@@ -1080,27 +1048,6 @@ RU-28</description>
 <rectangle x1="-3.075" y1="2.2" x2="-2.775" y2="3.25" layer="51"/>
 <rectangle x1="-3.725" y1="2.2" x2="-3.425" y2="3.25" layer="51"/>
 <rectangle x1="-4.375" y1="2.2" x2="-4.075" y2="3.25" layer="51"/>
-</package>
-<package name="SOT223">
-<description>&lt;b&gt;SOT-223&lt;/b&gt;</description>
-<wire x1="3.2766" y1="1.651" x2="3.2766" y2="-1.651" width="0.2032" layer="21"/>
-<wire x1="3.2766" y1="-1.651" x2="-3.2766" y2="-1.651" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="-1.651" x2="-3.2766" y2="1.651" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="1.651" x2="3.2766" y2="1.651" width="0.2032" layer="21"/>
-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
-<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
-<text x="-3.4925" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
-<text x="3.4925" y="-0.127" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -2019,44 +1966,6 @@ RU-28</description>
 <pin name="BOUT2" x="35.56" y="10.16" length="middle" rot="R180"/>
 <pin name="GND" x="15.24" y="-5.08" length="middle" rot="R90"/>
 <pin name="AGND" x="22.86" y="-5.08" length="middle" rot="R90"/>
-</symbol>
-<symbol name="IRFL024NTRPBF">
-<description>IRFL024NTRPBF N-Channel 55 V 2.8A (Ta) 1W (Ta) Surface Mount SOT-223</description>
-<pin name="G" x="-1.016" y="-3.302" length="middle"/>
-<pin name="D" x="7.874" y="6.604" length="middle" rot="R270"/>
-<pin name="S" x="7.874" y="-9.906" length="middle" rot="R90"/>
-<circle x="6.35" y="-1.27" radius="3.81" width="0.1524" layer="94"/>
-<wire x1="4.064" y1="-3.302" x2="4.064" y2="0.762" width="0.1524" layer="94"/>
-<wire x1="5.334" y1="2.032" x2="5.334" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="5.334" y1="1.016" x2="5.334" y2="0.254" width="0.1524" layer="94"/>
-<wire x1="5.334" y1="-0.508" x2="5.334" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="5.334" y1="-1.27" x2="5.334" y2="-2.032" width="0.1524" layer="94"/>
-<wire x1="5.334" y1="-3.048" x2="5.334" y2="-3.81" width="0.1524" layer="94"/>
-<wire x1="5.334" y1="-3.81" x2="5.334" y2="-4.572" width="0.1524" layer="94"/>
-<wire x1="5.334" y1="-3.81" x2="6.35" y2="-3.81" width="0.1524" layer="94"/>
-<wire x1="6.35" y1="-3.81" x2="6.35" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="6.35" y1="-1.27" x2="5.334" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="6.35" y1="-3.81" x2="7.874" y2="-3.81" width="0.1524" layer="94"/>
-<wire x1="7.874" y1="-3.81" x2="7.874" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="7.874" y1="1.016" x2="5.334" y2="1.016" width="0.1524" layer="94"/>
-<polygon width="0.1524" layer="94">
-<vertex x="5.334" y="-1.27"/>
-<vertex x="5.842" y="-0.762"/>
-<vertex x="5.842" y="-1.778"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="7.874" y="-1.27"/>
-<vertex x="7.112" y="-2.032"/>
-<vertex x="8.636" y="-2.032"/>
-</polygon>
-<wire x1="7.112" y1="-1.27" x2="7.366" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="7.366" y1="-1.016" x2="8.636" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="8.636" y1="-1.016" x2="8.89" y2="-0.762" width="0.1524" layer="94"/>
-<wire x1="7.874" y1="-5.334" x2="7.874" y2="-3.81" width="0.1524" layer="94"/>
-<wire x1="7.874" y1="1.016" x2="7.874" y2="3.81" width="0.1524" layer="94"/>
-<text x="0" y="-3.048" size="1.778" layer="94">G</text>
-<text x="8.128" y="-6.858" size="1.778" layer="94">S</text>
-<text x="8.128" y="3.048" size="1.778" layer="94">D</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2980,17 +2889,11 @@ RU-28</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="IRFL024NPBF">
+<deviceset name="IRFL024NTRPBF">
 <gates>
-<gate name="G$1" symbol="IRFL024NTRPBF" x="-10.16" y="10.16"/>
 </gates>
 <devices>
-<device name="" package="SOT223">
-<connects>
-<connect gate="G$1" pin="D" pad="2 4"/>
-<connect gate="G$1" pin="G" pad="1"/>
-<connect gate="G$1" pin="S" pad="3"/>
-</connects>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
