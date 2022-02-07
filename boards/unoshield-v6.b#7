@@ -212,7 +212,7 @@ unoshield-v6</text>
 <text x="7.112" y="51.562" size="1.27" layer="21" rot="R90">300</text>
 <text x="9.017" y="57.277" size="1.27" layer="21" rot="R90">+5V</text>
 <text x="6.223" y="55.753" size="1.27" layer="21" rot="R90">DOUT</text>
-<text x="38.735" y="15.748" size="1.016" layer="21" rot="R180">S1BFSCT-ND</text>
+<text x="36.195" y="15.748" size="1.016" layer="21" rot="R180">S1B</text>
 <text x="18.415" y="62.357" size="1.016" layer="21" rot="R180">Button</text>
 <text x="46.609" y="35.433" size="1.27" layer="21" rot="R180">GND</text>
 <text x="38.481" y="56.515" size="1.27" layer="21" rot="R180">D3</text>
@@ -222,7 +222,7 @@ unoshield-v6</text>
 <text x="19.177" y="6.35" size="1.27" layer="21" rot="R90">10k</text>
 <text x="29.591" y="55.245" size="0.8128" layer="21" rot="R180">SWITCH</text>
 <text x="39.37" y="59.182" size="1.016" layer="21" rot="R180">Button</text>
-<text x="30.861" y="8.89" size="1.016" layer="21" rot="R180">IRLML0060</text>
+<text x="36.576" y="20.32" size="1.016" layer="21" rot="R180">IRFL024NTRPBF</text>
 <text x="34.29" y="22.225" size="1.27" layer="21">Vin</text>
 <text x="12.319" y="33.02" size="1.27" layer="21">5 V in</text>
 <text x="8.001" y="24.892" size="1.27" layer="21">GND</text>

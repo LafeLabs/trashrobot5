@@ -220,7 +220,7 @@ unoshield-v6</text>
 <text x="43.307" y="12.7" size="1.27" layer="21" rot="R270">MOTOR</text>
 <text x="23.241" y="20.955" size="1.27" layer="21" rot="R180">D5</text>
 <text x="19.177" y="6.35" size="1.27" layer="21" rot="R90">10k</text>
-<text x="29.591" y="55.245" size="0.8128" layer="21" rot="R180">SWITCH</text>
+<text x="28.956" y="53.975" size="0.8128" layer="21" rot="R180">SWITCH</text>
 <text x="39.37" y="59.182" size="1.016" layer="21" rot="R180">Button</text>
 <text x="36.576" y="20.32" size="1.016" layer="21" rot="R180">IRFL024NTRPBF</text>
 <text x="34.29" y="22.225" size="1.27" layer="21">Vin</text>
