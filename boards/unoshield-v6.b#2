@@ -949,9 +949,8 @@ design rules under a new name.</description>
 <wire x1="19.685" y1="13.97" x2="19.685" y2="14.285" width="0.6096" layer="1"/>
 <wire x1="19.685" y1="13.97" x2="19.685" y2="19.05" width="0.6096" layer="1"/>
 <contactref element="U$1" pad="1"/>
-<wire x1="19.685" y1="19.05" x2="24.6126" y2="19.05" width="0.6096" layer="1"/>
-<wire x1="24.8412" y1="18.8214" x2="24.6126" y2="19.05" width="0.6096" layer="1"/>
-<wire x1="24.8412" y1="18.8214" x2="24.8412" y2="17.5514" width="0.6096" layer="1"/>
+<wire x1="24.8412" y1="19.05" x2="24.8412" y2="17.5514" width="0.6096" layer="1"/>
+<wire x1="19.685" y1="19.05" x2="24.8412" y2="19.05" width="0.6096" layer="1"/>
 </signal>
 <signal name="CL">
 <contactref element="J4" pad="A5"/>
@@ -1067,9 +1066,9 @@ design rules under a new name.</description>
 <contactref element="J1" pad="1"/>
 <contactref element="J10" pad="1"/>
 <wire x1="8.255" y1="62.23" x2="10.16" y2="62.23" width="0.6096" layer="16"/>
-<wire x1="10.16" y1="53.975" x2="16.51" y2="53.975" width="0.6096" layer="16"/>
-<wire x1="16.51" y1="53.975" x2="16.51" y2="49.824" width="0.6096" layer="16"/>
-<wire x1="15.073" y1="48.387" x2="16.51" y2="49.824" width="0.6096" layer="16"/>
+<wire x1="10.16" y1="53.975" x2="15.24" y2="53.975" width="0.6096" layer="16"/>
+<wire x1="15.24" y1="53.975" x2="15.24" y2="48.554" width="0.6096" layer="16"/>
+<wire x1="15.073" y1="48.387" x2="15.24" y2="48.554" width="0.6096" layer="16"/>
 <wire x1="10.16" y1="62.23" x2="10.16" y2="53.975" width="0.6096" layer="16"/>
 <wire x1="15.073" y1="48.387" x2="13.97" y2="47.284" width="0.6096" layer="1"/>
 <wire x1="13.97" y1="30.48" x2="13.97" y2="47.284" width="0.6096" layer="1"/>
