@@ -27,7 +27,7 @@ int value8 = 8*114;
 int button = 0;  //0 means no press, 1 is start, 2 is stop, 3 is left, 4 is back 5 is forward, 6 is right, 7 is down 8 is up
 
 
-int delayus = 1000;//delayMicroseconds(delayus);
+int delayus = 500;//delayMicroseconds(delayus);
 
 int z = 0;
 int zdelay = 0;// microseconds 1000 ms / 512 steps = 2 ms/step
@@ -69,98 +69,61 @@ void loop() {
   controller = analogRead(A0);
 
   if(controller > value1 - delta && controller < value1 + delta){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller > value1 - delta && controller < value1 + delta){
-        button = 1;   
-      }
-   }
-
+     button = 1;   
+  }
   if(controller > value2 - delta && controller < value2 + delta){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller > value2 - delta && controller < value2 + delta){
-        button = 2;   
-      }
-   }
+     button = 2;   
+  }
 
   if(controller > value3 - delta && controller < value3 + delta){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller > value3 - delta && controller < value3 + delta){
-        button = 3;   
-      }
-   }
+     button = 3;   
+  }
 
   if(controller > value4 - delta && controller < value4 + delta){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller > value4 - delta && controller < value4 + delta){
-        button = 4;   
-      }
-   }
+     button = 4;    
+  }
 
   if(controller > value5 - delta && controller < value5 + delta){
-   delayMicroseconds(10);
-   controller = analogRead(A0);
-      if(controller > value5 - delta && controller < value5 + delta){
-        button = 5;   
-      }
-   }
+     button = 5;   
+  }
 
   if(controller > value6 - delta && controller < value6 + delta){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller > value6 - delta && controller < value6 + delta){
-        button = 6;   
-      }
-   }
+     button = 6;   
+  }
 
   if(controller > value7 - delta && controller < value7 + delta){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller > value7 - delta && controller < value7 + delta){
-        button = 7;   
-      }
-   }
+     button = 7;   
+  }
 
   if(controller > value8 - delta && controller < value8 + delta){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller > value8 - delta && controller < value8 + delta){
-        button = 8;   
-      }
-   }
+     button = 8;         
+  }
 
 
   if(controller < 50){
-    delayMicroseconds(10);
-    controller = analogRead(A0);
-      if(controller < 50){
-        button = 0;   
-      }
-   }
+     button = 0;   
+  }
 
    if(button == 1){
-    Serial.println("start");  
+    //Serial.println("start");  
    }
    if(button == 2){
-    Serial.println("stop");
+    //Serial.println("stop");
    }
    if(button == 3){
-    Serial.println("left");
+    //Serial.println("left");
     moveLeft(1);
    }
    if(button == 4){
-    Serial.println("back");
+    //Serial.println("back");
     moveAway(1);
    }
    if(button == 5){
-      Serial.println("forward");
+    //  Serial.println("forward");
       moveTowards(1);
    }
    if(button == 6){
-      Serial.println("right");
+      //Serial.println("right");
       moveRight(1);
    }
    if(button == 7){
@@ -193,7 +156,7 @@ void loop() {
       digitalWrite(AIN2,HIGH);
    }      
    analogWrite(PWMA,abs(z));
-   Serial.println(z);
+   //Serial.println(z);
 
 }
 
