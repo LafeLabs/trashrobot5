@@ -1,3 +1,11 @@
+char coin[] = "GGGGGGGGGGGGGGGEEEEHEEEEEADDDDGGBBBBBBHHHHFAAAAAAADDDHBBFCCCHBFDFDHHFAAAAAAHADDFDBBBBBEEECCCHHHHFFFHAFDDDHAAECCCGAAHADDHBFFFFFHHFAAAAAAAFFFDDDDAAAFFFBBBHFFFFFFFFFFFFFGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGHFAAAAAAADDDHBBFCCCHBFDFDHHAAAAAHADDFDBBBBFCCCHHHHHFAAAAAAADDDHBBFCCCHHHBBFCCCHHHHHAAAAAHADDFDBBBBFCCCHHHHHEEEEEADDDDGGBBBBBBHHHEEEEEEEEEGGGGGGGGGGGGGGG";
+
+//char coin[]= "hefgahefg";
+
+int unit = 100;
+int side = unit;
+
+
 int controller = 0;
 int delta = 16;
 
@@ -30,7 +38,11 @@ int button = 0;  //0 means no press, 1 is start, 2 is stop, 3 is left, 4 is back
 int delayus = 500;//delayMicroseconds(delayus);
 
 int z = 0;
-int zdelay = 500;// microseconds 1000 ms / 512 steps = 2 ms/step
+int zdelay = 1500;// microseconds 1000 ms / 512 steps = 2 ms/step
+
+
+boolean goBool = false;
+boolean stopBool = false;
 
 void setup() {
   // put your setup code here, to run once:
@@ -106,9 +118,12 @@ void loop() {
 
    if(button == 1){
     //Serial.println("start");  
+    stopBool = false;
+    printCoin();
    }
    if(button == 2){
     //Serial.println("stop");
+    
    }
    if(button == 3){
     //Serial.println("left");
@@ -131,7 +146,7 @@ void loop() {
       if(z < -255){
         z = -255;
       }
-      delayMicroseconds(zdelay);
+      delayMicroseconds(delayus);
 //      Serial.println("down");
    }
     if(button == 8){
@@ -140,7 +155,7 @@ void loop() {
       if(z > 255){
         z = 255;
       }
-      delayMicroseconds(zdelay);
+      delayMicroseconds(delayus);
 //      Serial.println("up");
    }
 
@@ -161,6 +176,46 @@ void loop() {
 }
 
 
+void moveUp(int nSteps){
+
+  for(int index = 0;index < nSteps;index++){
+    z += 1;
+    if(z>255){
+      z=255;
+    }
+    if(z >= 0){
+      digitalWrite(AIN2,LOW);
+      digitalWrite(AIN1,HIGH);      
+    }
+    else{
+      digitalWrite(AIN1,LOW);      
+      digitalWrite(AIN2,HIGH);
+    }      
+    analogWrite(PWMA,abs(z)); 
+    delayMicroseconds(zdelay); 
+  }
+
+}
+
+void moveDown(int nSteps){
+
+  for(int index = 0;index < nSteps;index++){
+    z -= 1;
+    if(z < 0){
+      z=0;
+    }
+    if(z >= 0){
+      digitalWrite(AIN2,LOW);
+      digitalWrite(AIN1,HIGH);      
+    }
+    else{
+      digitalWrite(AIN1,LOW);      
+      digitalWrite(AIN2,HIGH);
+    }      
+    analogWrite(PWMA,abs(z)); 
+    delayMicroseconds(zdelay); 
+  }
+}
 
 void moveLeft(int nSteps){
      digitalWrite(dirPin1,LOW);
@@ -217,4 +272,83 @@ void moveTowards(int nSteps){
        delayMicroseconds(delayus); 
      }          
      digitalWrite(enPin2,HIGH);   
+}
+
+
+void geometronAction(char action){
+
+  controller = analogRead(A0);
+  if(controller > value2 - delta && controller < value2 + delta){
+     button = 2;
+     stopBool = true;   
+  }
+
+  if(action == 'a'){
+     moveRight(side);
+  }
+  if(action == 'b'){
+     moveLeft(side);
+  }
+  if(action == 'c'){
+    moveAway(side);
+  }
+  if(action == 'd'){
+    moveTowards(side);
+  }
+  if(action == 'e'){
+    moveUp(side);
+  }
+  if(action == 'f'){
+    moveDown(side);
+  }
+  if(action == 'g'){
+    side /= 2;
+  }
+  if(action == 'h'){
+    side *= 2;
+  }
+  if(action == 'A'){
+    geometronSequence("ggdhhhefg");
+  }
+  if(action == 'B'){
+    geometronSequence("ggchhhefg");
+  }
+  if(action == 'C'){
+    geometronSequence("ggbhhhefg");
+  }
+  if(action == 'D'){
+    geometronSequence("ggahhhefg");
+  }
+  if(action == 'E'){
+    geometronSequence("ggdhh");
+  }
+  if(action == 'F'){
+    geometronSequence("ggchh");
+  }
+  if(action == 'G'){
+    geometronSequence("ggbhh");
+  }
+  if(action == 'H'){
+    geometronSequence("ggahh");
+  }
+}
+
+
+void printCoin(){
+   for(int index = 0;index <= sizeof(coin);index++){
+    if(!stopBool){
+      geometronAction(coin[index]);    
+    }
+   }  
+}
+
+
+void geometronSequence(String glyph){
+  //for loop thru the String
+  int index = 0;
+  for(index = 0;index < glyph.length();index++){
+    if(!stopBool){
+      geometronAction(glyph.charAt(index));      
+    }
+   }
 }
