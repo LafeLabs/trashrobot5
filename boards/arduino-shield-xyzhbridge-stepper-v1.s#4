@@ -4459,6 +4459,11 @@ Adafruit</text>
 <junction x="122.555" y="65.405"/>
 <label x="122.555" y="78.74" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="102.87" y1="121.92" x2="98.425" y2="121.92" width="0.1524" layer="91"/>
+<label x="97.155" y="121.92" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PWMB" class="0">
 <segment>
@@ -4537,12 +4542,6 @@ Adafruit</text>
 <pinref part="U$1" gate="G$1" pin="STBY"/>
 <wire x1="102.87" y1="109.22" x2="97.79" y2="109.22" width="0.1524" layer="91"/>
 <label x="95.885" y="108.585" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="102.87" y1="121.92" x2="98.425" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VMOT3" class="0">

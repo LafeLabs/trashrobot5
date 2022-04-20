@@ -4076,6 +4076,9 @@ Adafruit</text>
 <part name="J15" library="SparkFun-Connectors" deviceset="CONN_01" device=""/>
 <part name="J16" library="SparkFun-Connectors" deviceset="CONN_01" device=""/>
 <part name="J17" library="SparkFun-Connectors" deviceset="CONN_01" device=""/>
+<part name="J5" library="SparkFun-Connectors" deviceset="CONN_03" device="" value="455-1750-1-ND"/>
+<part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4200,6 +4203,16 @@ Adafruit</text>
 <attribute name="VALUE" x="104.14" y="55.626" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="104.14" y="47.752" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
+<instance part="J5" gate="J$1" x="34.29" y="85.725" smashed="yes">
+<attribute name="VALUE" x="31.75" y="78.359" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="31.75" y="91.313" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="GND7" gate="1" x="43.18" y="80.645" smashed="yes">
+<attribute name="VALUE" x="43.18" y="80.391" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY1" gate="G$1" x="43.18" y="88.265" smashed="yes">
+<attribute name="VALUE" x="43.18" y="91.059" size="1.778" layer="96" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4268,6 +4281,11 @@ Adafruit</text>
 <pinref part="J6" gate="G$1" pin="3"/>
 <wire x1="24.13" y1="124.46" x2="24.13" y2="120.015" width="0.1524" layer="91"/>
 <label x="24.13" y="121.92" size="1.778" layer="95" rot="R270"/>
+</segment>
+<segment>
+<pinref part="J5" gate="J$1" pin="1"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="43.18" y1="83.185" x2="41.91" y2="83.185" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DIR1" class="0">
@@ -4464,6 +4482,11 @@ Adafruit</text>
 <wire x1="26.67" y1="124.46" x2="26.67" y2="120.65" width="0.1524" layer="91"/>
 <wire x1="26.67" y1="120.65" x2="27.305" y2="120.65" width="0.1524" layer="91"/>
 <label x="26.67" y="121.92" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="J$1" pin="3"/>
+<pinref part="SUPPLY1" gate="G$1" pin="5V"/>
+<wire x1="43.18" y1="88.265" x2="41.91" y2="88.265" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PWMB" class="0">
@@ -4712,6 +4735,15 @@ Adafruit</text>
 <pinref part="J4" gate="G$1" pin="SDA"/>
 <wire x1="73.66" y1="110.49" x2="76.2" y2="110.49" width="0.1524" layer="91"/>
 <label x="75.565" y="110.49" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="J4" gate="G$1" pin="A4"/>
+<wire x1="48.26" y1="82.55" x2="45.085" y2="82.55" width="0.1524" layer="91"/>
+<wire x1="45.085" y1="82.55" x2="45.085" y2="85.725" width="0.1524" layer="91"/>
+<pinref part="J5" gate="J$1" pin="2"/>
+<wire x1="45.085" y1="85.725" x2="41.91" y2="85.725" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -270,13 +270,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 <text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
 </symbol>
-<symbol name="12V">
-<description>&lt;h3&gt;12V Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="12V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
 <symbol name="5V">
 <description>&lt;h3&gt;5V Voltage Supply&lt;/h3&gt;</description>
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
@@ -291,20 +284,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
 <gates>
 <gate name="1" symbol="DGND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="12V" prefix="SUPPLY">
-<description>&lt;h3&gt;12V Supply Symbol&lt;/h3&gt;
-&lt;p&gt;Power supply symbol for a specifically-stated 12V source.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="12V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -4069,7 +4048,6 @@ Adafruit</text>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND15" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND23" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY19" library="SparkFun-PowerSymbols" deviceset="12V" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="IC1" library="pololu-stepper-driver" deviceset="2967-MP6500" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -4132,9 +4110,6 @@ Adafruit</text>
 </instance>
 <instance part="GND23" gate="1" x="45.72" y="142.24" smashed="yes">
 <attribute name="VALUE" x="45.72" y="141.986" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="SUPPLY19" gate="G$1" x="45.72" y="147.32" smashed="yes">
-<attribute name="VALUE" x="45.72" y="150.114" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="J2" gate="G$1" x="38.1" y="144.78" smashed="yes">
 <attribute name="VALUE" x="35.56" y="139.954" size="1.778" layer="96" font="vector"/>
@@ -4377,10 +4352,6 @@ Adafruit</text>
 </segment>
 </net>
 <net name="12V" class="0">
-<segment>
-<pinref part="SUPPLY19" gate="G$1" pin="12V"/>
-<pinref part="J2" gate="G$1" pin="2"/>
-</segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="VIN"/>
 <wire x1="48.26" y1="97.79" x2="45.72" y2="97.79" width="0.1524" layer="91"/>
@@ -4692,6 +4663,11 @@ Adafruit</text>
 <pinref part="J14" gate="G$1" pin="1"/>
 <wire x1="123.825" y1="48.26" x2="120.65" y2="48.26" width="0.1524" layer="91"/>
 <label x="123.825" y="75.565" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="147.32" x2="53.34" y2="147.32" width="0.1524" layer="91"/>
+<label x="48.895" y="147.955" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VMOT1" class="0">

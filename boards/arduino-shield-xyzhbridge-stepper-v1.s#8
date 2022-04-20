@@ -4684,6 +4684,32 @@ Adafruit</text>
 <label x="38.735" y="74.93" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="J12" gate="G$1" pin="1"/>
+<wire x1="120.65" y1="76.2" x2="123.825" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="123.825" y1="76.2" x2="123.825" y2="62.865" width="0.1524" layer="91"/>
+<pinref part="J13" gate="G$1" pin="1"/>
+<wire x1="123.825" y1="62.865" x2="120.65" y2="62.865" width="0.1524" layer="91"/>
+<wire x1="123.825" y1="62.865" x2="123.825" y2="48.26" width="0.1524" layer="91"/>
+<junction x="123.825" y="62.865"/>
+<pinref part="J14" gate="G$1" pin="1"/>
+<wire x1="123.825" y1="48.26" x2="120.65" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="J14" gate="G$1" pin="2"/>
+<wire x1="120.65" y1="50.8" x2="122.555" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="122.555" y1="50.8" x2="122.555" y2="65.405" width="0.1524" layer="91"/>
+<pinref part="J13" gate="G$1" pin="2"/>
+<wire x1="122.555" y1="65.405" x2="120.65" y2="65.405" width="0.1524" layer="91"/>
+<pinref part="J12" gate="G$1" pin="2"/>
+<wire x1="120.65" y1="78.74" x2="122.555" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="122.555" y1="78.74" x2="122.555" y2="65.405" width="0.1524" layer="91"/>
+<junction x="122.555" y="65.405"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>

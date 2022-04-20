@@ -4696,12 +4696,22 @@ Adafruit</text>
 <wire x1="21.59" y1="124.46" x2="21.59" y2="120.65" width="0.1524" layer="91"/>
 <label x="21.59" y="122.555" size="1.778" layer="95" rot="R270"/>
 </segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="SCL"/>
+<wire x1="73.66" y1="113.03" x2="77.47" y2="113.03" width="0.1524" layer="91"/>
+<label x="76.2" y="113.03" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="J6" gate="G$1" pin="1"/>
 <wire x1="19.05" y1="124.46" x2="19.05" y2="120.65" width="0.1524" layer="91"/>
 <label x="19.05" y="121.92" size="1.778" layer="95" rot="R270"/>
+</segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="SDA"/>
+<wire x1="73.66" y1="110.49" x2="76.2" y2="110.49" width="0.1524" layer="91"/>
+<label x="75.565" y="110.49" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

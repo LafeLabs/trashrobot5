@@ -4551,6 +4551,12 @@ Adafruit</text>
 <wire x1="102.87" y1="124.46" x2="98.425" y2="124.46" width="0.1524" layer="91"/>
 <label x="97.155" y="125.73" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J17" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="50.8" x2="87.63" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="87.63" y1="50.8" x2="87.63" y2="51.435" width="0.1524" layer="91"/>
+<label x="83.185" y="50.8" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$11" class="0">
 <segment>
@@ -4678,6 +4684,11 @@ Adafruit</text>
 <wire x1="204.47" y1="105.41" x2="205.105" y2="105.41" width="0.1524" layer="91"/>
 <label x="203.835" y="106.045" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J15" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="77.47" x2="88.9" y2="77.47" width="0.1524" layer="91"/>
+<label x="85.725" y="77.47" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VMOT2" class="0">
 <segment>
@@ -4685,6 +4696,12 @@ Adafruit</text>
 <wire x1="137.16" y1="163.83" x2="143.51" y2="163.83" width="0.1524" layer="91"/>
 <wire x1="143.51" y1="163.83" x2="143.51" y2="171.45" width="0.1524" layer="91"/>
 <label x="143.51" y="171.45" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J16" gate="G$1" pin="1"/>
+<wire x1="93.345" y1="64.77" x2="93.345" y2="65.405" width="0.1524" layer="91"/>
+<wire x1="93.345" y1="65.405" x2="88.9" y2="65.405" width="0.1524" layer="91"/>
+<label x="85.09" y="64.77" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

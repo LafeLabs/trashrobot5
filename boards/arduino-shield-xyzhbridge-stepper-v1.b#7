@@ -198,20 +198,42 @@
 <text x="2.54" y="-2.54" size="1.778" layer="27">Tent Vias!</text>
 <text x="32.766" y="53.594" size="1.778" layer="21" rot="R180">OFF</text>
 <text x="4.826" y="24.257" size="1.27" layer="21">Vext</text>
-<text x="69.85" y="46.736" size="1.27" layer="21" rot="R270">MOTOR1</text>
-<text x="70.739" y="21.59" size="1.27" layer="21" rot="R270">MOTOR3</text>
+<text x="69.85" y="51.181" size="1.27" layer="21" rot="R270">MOTOR1</text>
+<text x="68.834" y="22.225" size="1.27" layer="21" rot="R270">MOTOR3</text>
 <text x="68.834" y="25.4" size="1.27" layer="21" rot="R180">Pololu
 2966</text>
-<text x="70.358" y="28.829" size="1.27" layer="21" rot="R90">MOTOR2</text>
+<text x="70.993" y="28.829" size="1.27" layer="21" rot="R90">MOTOR2</text>
 <text x="17.272" y="1.27" size="1.27" layer="21">trashrobot5-arduino-shield-xyzhbridge-stepper-v1 April 2022</text>
 <text x="59.944" y="20.828" size="1.27" layer="21" rot="R270">MOTOR3</text>
 <text x="46.355" y="34.036" size="1.27" layer="21" rot="R90">MOTOR2</text>
-<text x="6.731" y="7.112" size="1.27" layer="21">I2C</text>
+<text x="3.556" y="38.227" size="1.27" layer="21">I2C</text>
 <text x="6.223" y="11.176" size="1.27" layer="21" rot="R90">audio out</text>
 <text x="7.366" y="40.767" size="1.27" layer="21">DA</text>
 <text x="7.366" y="43.307" size="1.27" layer="21">CL</text>
 <text x="7.366" y="48.387" size="1.27" layer="21">5V</text>
 <text x="7.366" y="45.847" size="1.27" layer="21">GND</text>
+<text x="8.001" y="29.972" size="1.27" layer="21">GND</text>
+<text x="68.326" y="1.397" size="1.27" layer="21">GND</text>
+<text x="63.246" y="4.572" size="1.27" layer="21">A0-control</text>
+<text x="69.596" y="7.112" size="1.27" layer="21">5V</text>
+<text x="14.351" y="21.717" size="1.27" layer="21">Vext</text>
+<text x="24.511" y="20.447" size="1.27" layer="21">Vext</text>
+<text x="34.671" y="20.447" size="1.27" layer="21">Vext</text>
+<text x="39.751" y="19.812" size="1.27" layer="21">5V</text>
+<text x="30.226" y="19.812" size="1.27" layer="21">5V</text>
+<text x="20.701" y="19.812" size="1.27" layer="21">5V</text>
+<text x="13.716" y="26.162" size="1.27" layer="21">VM1</text>
+<text x="28.956" y="27.432" size="1.27" layer="21">VM2</text>
+<text x="39.116" y="25.527" size="1.27" layer="21">VM3</text>
+<text x="23.876" y="14.097" size="1.27" layer="21">probe</text>
+<text x="19.431" y="12.192" size="1.27" layer="21">Cs</text>
+<text x="11.176" y="8.382" size="1.27" layer="21">10uF</text>
+<text x="10.541" y="19.812" size="1.27" layer="21">10uF</text>
+<text x="27.051" y="16.637" size="1.27" layer="21">A1</text>
+<text x="21.336" y="14.732" size="1.27" layer="21">A2</text>
+<text x="6.096" y="6.477" size="1.27" layer="21">SlimeZistor</text>
+<text x="71.12" y="20.574" size="1.27" layer="21">A</text>
+<text x="71.12" y="15.494" size="1.27" layer="21">B</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">
