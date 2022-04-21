@@ -270,13 +270,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 <text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
 </symbol>
-<symbol name="12V">
-<description>&lt;h3&gt;12V Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="12V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
 <symbol name="5V">
 <description>&lt;h3&gt;5V Voltage Supply&lt;/h3&gt;</description>
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
@@ -291,20 +284,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
 <gates>
 <gate name="1" symbol="DGND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="12V" prefix="SUPPLY">
-<description>&lt;h3&gt;12V Supply Symbol&lt;/h3&gt;
-&lt;p&gt;Power supply symbol for a specifically-stated 12V source.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="12V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -3970,6 +3949,27 @@ Adafruit</text>
 <wire x1="0.635" y1="0" x2="0.635" y2="1.905" width="0.1524" layer="21"/>
 <wire x1="0.635" y1="0" x2="0.635" y2="-1.905" width="0.1524" layer="21"/>
 </package>
+<package name="SOT223">
+<description>&lt;b&gt;SOT-223&lt;/b&gt;</description>
+<wire x1="3.2766" y1="1.651" x2="3.2766" y2="-1.651" width="0.2032" layer="21"/>
+<wire x1="3.2766" y1="-1.651" x2="-3.2766" y2="-1.651" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="-1.651" x2="-3.2766" y2="1.651" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="1.651" x2="3.2766" y2="1.651" width="0.2032" layer="21"/>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
+<text x="-3.4925" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="3.4925" y="-0.127" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="ADAFRUIT-TB6612">
@@ -3999,6 +3999,44 @@ Adafruit</text>
 <pin name="P$2" x="5.588" y="0" length="middle" rot="R180"/>
 <wire x1="-0.508" y1="-1.778" x2="-0.508" y2="2.032" width="0.1524" layer="94"/>
 <wire x1="0.508" y1="2.032" x2="0.508" y2="-1.778" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="IRFL024NTRPBF">
+<description>IRFL024NTRPBF N-Channel 55 V 2.8A (Ta) 1W (Ta) Surface Mount SOT-223</description>
+<pin name="G" x="-1.016" y="-3.302" length="middle"/>
+<pin name="D" x="7.874" y="6.604" length="middle" rot="R270"/>
+<pin name="S" x="7.874" y="-9.906" length="middle" rot="R90"/>
+<circle x="6.35" y="-1.27" radius="3.81" width="0.1524" layer="94"/>
+<wire x1="4.064" y1="-3.302" x2="4.064" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="2.032" x2="5.334" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="1.016" x2="5.334" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="-0.508" x2="5.334" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="-1.27" x2="5.334" y2="-2.032" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="-3.048" x2="5.334" y2="-3.81" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="-3.81" x2="5.334" y2="-4.572" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="-3.81" x2="6.35" y2="-3.81" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="-3.81" x2="6.35" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="-1.27" x2="5.334" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="-3.81" x2="7.874" y2="-3.81" width="0.1524" layer="94"/>
+<wire x1="7.874" y1="-3.81" x2="7.874" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="7.874" y1="1.016" x2="5.334" y2="1.016" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="5.334" y="-1.27"/>
+<vertex x="5.842" y="-0.762"/>
+<vertex x="5.842" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="7.874" y="-1.27"/>
+<vertex x="7.112" y="-2.032"/>
+<vertex x="8.636" y="-2.032"/>
+</polygon>
+<wire x1="7.112" y1="-1.27" x2="7.366" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="7.366" y1="-1.016" x2="8.636" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="8.636" y1="-1.016" x2="8.89" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="7.874" y1="-5.334" x2="7.874" y2="-3.81" width="0.1524" layer="94"/>
+<wire x1="7.874" y1="1.016" x2="7.874" y2="3.81" width="0.1524" layer="94"/>
+<text x="0" y="-3.048" size="1.778" layer="94">G</text>
+<text x="8.128" y="-6.858" size="1.778" layer="94">S</text>
+<text x="8.128" y="3.048" size="1.778" layer="94">D</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -4048,6 +4086,116 @@ Adafruit</text>
 </device>
 </devices>
 </deviceset>
+<deviceset name="IRFL024NPBF">
+<gates>
+<gate name="G$1" symbol="IRFL024NTRPBF" x="-10.16" y="10.16"/>
+</gates>
+<devices>
+<device name="" package="SOT223">
+<connects>
+<connect gate="G$1" pin="D" pad="2 4"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SparkFun-Resistors">
+<description>&lt;h3&gt;SparkFun Resistors&lt;/h3&gt;
+This library contains resistors. Reference designator:R. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="0603" urn="urn:adsk.eagle:footprint:39615/1" library_version="1">
+<description>&lt;p&gt;&lt;b&gt;Generic 1608 (0603) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-1.6" y1="0.7" x2="1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="0.7" x2="1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="-0.7" x2="-1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="-1.6" y1="-0.7" x2="-1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
+<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
+<package name="AXIAL-2.0">
+<wire x1="-22.86" y1="-5.08" x2="-22.86" y2="5.08" width="0.127" layer="21"/>
+<wire x1="-22.86" y1="5.08" x2="24.13" y2="5.08" width="0.127" layer="21"/>
+<wire x1="24.13" y1="5.08" x2="24.13" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="24.13" y1="-5.08" x2="-22.86" y2="-5.08" width="0.127" layer="21"/>
+<pad name="P$1" x="-25.4" y="0" drill="0.8" diameter="1.778" shape="square"/>
+<pad name="P$2" x="26.67" y="0" drill="0.8" diameter="1.778" shape="square"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="RESISTOR">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<text x="0" y="1.524" size="1.778" layer="95" font="vector" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.524" size="1.778" layer="96" font="vector" align="top-center">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="1OHM" prefix="R">
+<description>&lt;h3&gt;1Ω resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08269"/>
+<attribute name="VALUE" value="1"/>
+</technology>
+</technologies>
+</device>
+<device name="-AXIAL-2.0-10W-5%" package="AXIAL-2.0">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -4056,7 +4204,7 @@ Adafruit</text>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="Default" width="0.1778" drill="0">
+<class number="0" name="default" width="0.2032" drill="0">
 </class>
 <class number="1" name="vcc" width="0.1778" drill="0">
 </class>
@@ -4069,13 +4217,10 @@ Adafruit</text>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND15" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND23" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY19" library="SparkFun-PowerSymbols" deviceset="12V" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="IC1" library="pololu-stepper-driver" deviceset="2967-MP6500" device=""/>
-<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="12V" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="IC3" library="pololu-stepper-driver" deviceset="2967-MP6500" device=""/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="12V" device=""/>
 <part name="J4" library="SparkFun-Boards" deviceset="ARDUINO_R3_SHIELD" device=""/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="SUPPLY6" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
@@ -4085,8 +4230,6 @@ Adafruit</text>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="U$1" library="spietz-library-2" deviceset="ADAFRUIT-TB6612" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="CONN_04" device=""/>
-<part name="J5" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
-<part name="J8" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J9" library="SparkFun-Connectors" deviceset="CONN_03" device="" value="455-1750-1-ND"/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="J6" library="SparkFun-Connectors" deviceset="CONN_04" device=""/>
@@ -4102,6 +4245,11 @@ Adafruit</text>
 <part name="J15" library="SparkFun-Connectors" deviceset="CONN_01" device=""/>
 <part name="J16" library="SparkFun-Connectors" deviceset="CONN_01" device=""/>
 <part name="J17" library="SparkFun-Connectors" deviceset="CONN_01" device=""/>
+<part name="J5" library="SparkFun-Connectors" deviceset="CONN_03" device="" value="455-1750-1-ND"/>
+<part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
+<part name="U$5" library="spietz-library-2" deviceset="IRFL024NPBF" device=""/>
+<part name="R1" library="SparkFun-Resistors" deviceset="1OHM" device="-AXIAL-2.0-10W-5%"/>
 </parts>
 <sheets>
 <sheet>
@@ -4135,9 +4283,6 @@ Adafruit</text>
 <instance part="GND23" gate="1" x="45.72" y="142.24" smashed="yes">
 <attribute name="VALUE" x="45.72" y="141.986" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY19" gate="G$1" x="45.72" y="147.32" smashed="yes">
-<attribute name="VALUE" x="45.72" y="150.114" size="1.778" layer="96" align="bottom-center"/>
-</instance>
 <instance part="J2" gate="G$1" x="38.1" y="144.78" smashed="yes">
 <attribute name="VALUE" x="35.56" y="139.954" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="35.56" y="150.368" size="1.778" layer="95" font="vector"/>
@@ -4146,18 +4291,12 @@ Adafruit</text>
 <attribute name="NAME" x="184.15" y="103.505" size="1.778" layer="95"/>
 <attribute name="VALUE" x="184.15" y="77.47" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="204.47" y="100.33" smashed="yes">
-<attribute name="VALUE" x="204.47" y="103.124" size="1.778" layer="96" align="bottom-center"/>
-</instance>
 <instance part="GND1" gate="1" x="204.47" y="97.79" smashed="yes" rot="R90">
 <attribute name="VALUE" x="204.724" y="97.79" size="1.778" layer="96" rot="R90" align="top-center"/>
 </instance>
 <instance part="IC3" gate="G$1" x="124.46" y="156.21" smashed="yes">
 <attribute name="NAME" x="119.38" y="167.005" size="1.778" layer="95"/>
 <attribute name="VALUE" x="119.38" y="140.97" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY4" gate="G$1" x="137.16" y="163.83" smashed="yes">
-<attribute name="VALUE" x="137.16" y="166.624" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="J4" gate="G$1" x="60.96" y="90.17" smashed="yes" rot="MR180">
 <attribute name="NAME" x="51.308" y="69.088" size="1.778" layer="95" rot="MR180"/>
@@ -4185,14 +4324,6 @@ Adafruit</text>
 <instance part="J1" gate="G$1" x="149.225" y="114.3" smashed="yes" rot="R180">
 <attribute name="VALUE" x="154.305" y="121.666" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="154.305" y="106.172" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
-<instance part="J5" gate="G$1" x="141.605" y="128.905" smashed="yes" rot="R270">
-<attribute name="VALUE" x="136.779" y="131.445" size="1.778" layer="96" font="vector" rot="R270"/>
-<attribute name="NAME" x="147.193" y="131.445" size="1.778" layer="95" font="vector" rot="R270"/>
-</instance>
-<instance part="J8" gate="G$1" x="144.145" y="95.885" smashed="yes" rot="R90">
-<attribute name="VALUE" x="148.971" y="93.345" size="1.778" layer="96" font="vector" rot="R90"/>
-<attribute name="NAME" x="138.557" y="93.345" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="J9" gate="J$1" x="19.05" y="73.025" smashed="yes">
 <attribute name="VALUE" x="16.51" y="65.659" size="1.778" layer="96" font="vector"/>
@@ -4242,6 +4373,21 @@ Adafruit</text>
 <instance part="J17" gate="G$1" x="101.6" y="50.8" smashed="yes" rot="R180">
 <attribute name="VALUE" x="104.14" y="55.626" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="104.14" y="47.752" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="J5" gate="J$1" x="34.29" y="85.725" smashed="yes">
+<attribute name="VALUE" x="31.75" y="78.359" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="31.75" y="91.313" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="GND7" gate="1" x="43.18" y="80.645" smashed="yes">
+<attribute name="VALUE" x="43.18" y="80.391" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY1" gate="G$1" x="43.18" y="88.265" smashed="yes">
+<attribute name="VALUE" x="43.18" y="91.059" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="U$5" gate="G$1" x="61.849" y="49.657" smashed="yes"/>
+<instance part="R1" gate="G$1" x="55.88" y="41.275" smashed="yes" rot="R90">
+<attribute name="NAME" x="54.356" y="41.275" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="57.404" y="41.275" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -4306,6 +4452,16 @@ Adafruit</text>
 <wire x1="22.098" y1="87.63" x2="22.098" y2="87.757" width="0.1524" layer="91"/>
 <wire x1="22.098" y1="87.757" x2="24.765" y2="87.757" width="0.1524" layer="91"/>
 <junction x="24.765" y="87.757"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="3"/>
+<wire x1="24.13" y1="124.46" x2="24.13" y2="120.015" width="0.1524" layer="91"/>
+<label x="24.13" y="121.92" size="1.778" layer="95" rot="R270"/>
+</segment>
+<segment>
+<pinref part="J5" gate="J$1" pin="1"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="43.18" y1="83.185" x2="41.91" y2="83.185" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DIR1" class="0">
@@ -4385,19 +4541,6 @@ Adafruit</text>
 </segment>
 </net>
 <net name="12V" class="0">
-<segment>
-<pinref part="SUPPLY19" gate="G$1" pin="12V"/>
-<pinref part="J2" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="VMOT"/>
-<pinref part="SUPPLY1" gate="G$1" pin="12V"/>
-<wire x1="204.47" y1="100.33" x2="201.93" y2="100.33" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="IC3" gate="G$1" pin="VMOT"/>
-<pinref part="SUPPLY4" gate="G$1" pin="12V"/>
-</segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="VIN"/>
 <wire x1="48.26" y1="97.79" x2="45.72" y2="97.79" width="0.1524" layer="91"/>
@@ -4493,6 +4636,34 @@ Adafruit</text>
 <pinref part="SUPPLY3" gate="G$1" pin="5V"/>
 <wire x1="27.94" y1="75.565" x2="26.67" y2="75.565" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="J14" gate="G$1" pin="2"/>
+<wire x1="120.65" y1="50.8" x2="122.555" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="122.555" y1="50.8" x2="122.555" y2="65.405" width="0.1524" layer="91"/>
+<pinref part="J13" gate="G$1" pin="2"/>
+<wire x1="122.555" y1="65.405" x2="120.65" y2="65.405" width="0.1524" layer="91"/>
+<pinref part="J12" gate="G$1" pin="2"/>
+<wire x1="120.65" y1="78.74" x2="122.555" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="122.555" y1="78.74" x2="122.555" y2="65.405" width="0.1524" layer="91"/>
+<junction x="122.555" y="65.405"/>
+<label x="122.555" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="102.87" y1="121.92" x2="98.425" y2="121.92" width="0.1524" layer="91"/>
+<label x="97.155" y="121.92" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="4"/>
+<wire x1="26.67" y1="124.46" x2="26.67" y2="120.65" width="0.1524" layer="91"/>
+<wire x1="26.67" y1="120.65" x2="27.305" y2="120.65" width="0.1524" layer="91"/>
+<label x="26.67" y="121.92" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="J$1" pin="3"/>
+<pinref part="SUPPLY1" gate="G$1" pin="5V"/>
+<wire x1="43.18" y1="88.265" x2="41.91" y2="88.265" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="PWMB" class="0">
 <segment>
@@ -4573,16 +4744,17 @@ Adafruit</text>
 <label x="95.885" y="108.585" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="102.87" y1="121.92" x2="98.425" y2="121.92" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
+<net name="VMOT3" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="VM"/>
 <wire x1="102.87" y1="124.46" x2="98.425" y2="124.46" width="0.1524" layer="91"/>
+<label x="97.155" y="125.73" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J17" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="50.8" x2="87.63" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="87.63" y1="50.8" x2="87.63" y2="51.435" width="0.1524" layer="91"/>
+<label x="83.185" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -4590,12 +4762,8 @@ Adafruit</text>
 <pinref part="U$1" gate="G$1" pin="MB1"/>
 <wire x1="130.81" y1="119.38" x2="137.16" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="144.145" y1="114.3" x2="141.605" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="141.605" y1="114.3" x2="140.335" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="144.145" y1="114.3" x2="140.335" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="140.335" y1="114.3" x2="137.16" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="J5" gate="G$1" pin="1"/>
-<wire x1="141.605" y1="121.285" x2="141.605" y2="114.3" width="0.1524" layer="91"/>
-<junction x="141.605" y="114.3"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -4603,9 +4771,6 @@ Adafruit</text>
 <pinref part="U$1" gate="G$1" pin="MB2"/>
 <wire x1="130.81" y1="116.84" x2="144.145" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="1"/>
-<pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="144.145" y1="121.285" x2="144.145" y2="116.84" width="0.1524" layer="91"/>
-<junction x="144.145" y="116.84"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -4613,21 +4778,14 @@ Adafruit</text>
 <pinref part="U$1" gate="G$1" pin="MA1"/>
 <wire x1="130.81" y1="109.22" x2="144.145" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="4"/>
-<pinref part="J8" gate="G$1" pin="1"/>
-<wire x1="144.145" y1="103.505" x2="144.145" y2="109.22" width="0.1524" layer="91"/>
-<junction x="144.145" y="109.22"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="MA2"/>
-<wire x1="142.24" y1="106.68" x2="141.605" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="3"/>
-<wire x1="141.605" y1="106.68" x2="130.81" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="106.68" x2="130.81" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="144.145" y1="111.76" x2="142.24" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="J8" gate="G$1" pin="2"/>
-<wire x1="141.605" y1="103.505" x2="141.605" y2="106.68" width="0.1524" layer="91"/>
-<junction x="141.605" y="106.68"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -4684,6 +4842,86 @@ Adafruit</text>
 <label x="38.735" y="74.93" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="EXT" class="0">
+<segment>
+<pinref part="J12" gate="G$1" pin="1"/>
+<wire x1="120.65" y1="76.2" x2="123.825" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="123.825" y1="76.2" x2="123.825" y2="62.865" width="0.1524" layer="91"/>
+<pinref part="J13" gate="G$1" pin="1"/>
+<wire x1="123.825" y1="62.865" x2="120.65" y2="62.865" width="0.1524" layer="91"/>
+<wire x1="123.825" y1="62.865" x2="123.825" y2="48.26" width="0.1524" layer="91"/>
+<junction x="123.825" y="62.865"/>
+<pinref part="J14" gate="G$1" pin="1"/>
+<wire x1="123.825" y1="48.26" x2="120.65" y2="48.26" width="0.1524" layer="91"/>
+<label x="123.825" y="75.565" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="147.32" x2="53.34" y2="147.32" width="0.1524" layer="91"/>
+<label x="48.895" y="147.955" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VMOT1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="VMOT"/>
+<wire x1="204.47" y1="100.33" x2="201.93" y2="100.33" width="0.1524" layer="91"/>
+<wire x1="204.47" y1="100.33" x2="204.47" y2="105.41" width="0.1524" layer="91"/>
+<wire x1="204.47" y1="105.41" x2="205.105" y2="105.41" width="0.1524" layer="91"/>
+<label x="203.835" y="106.045" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J15" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="77.47" x2="88.9" y2="77.47" width="0.1524" layer="91"/>
+<label x="85.725" y="77.47" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VMOT2" class="0">
+<segment>
+<pinref part="IC3" gate="G$1" pin="VMOT"/>
+<wire x1="137.16" y1="163.83" x2="143.51" y2="163.83" width="0.1524" layer="91"/>
+<wire x1="143.51" y1="163.83" x2="143.51" y2="171.45" width="0.1524" layer="91"/>
+<label x="143.51" y="171.45" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J16" gate="G$1" pin="1"/>
+<wire x1="93.345" y1="64.77" x2="93.345" y2="65.405" width="0.1524" layer="91"/>
+<wire x1="93.345" y1="65.405" x2="88.9" y2="65.405" width="0.1524" layer="91"/>
+<label x="85.09" y="64.77" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCL" class="0">
+<segment>
+<pinref part="J6" gate="G$1" pin="2"/>
+<wire x1="21.59" y1="124.46" x2="21.59" y2="120.65" width="0.1524" layer="91"/>
+<label x="21.59" y="122.555" size="1.778" layer="95" rot="R270"/>
+</segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="SCL"/>
+<wire x1="73.66" y1="113.03" x2="77.47" y2="113.03" width="0.1524" layer="91"/>
+<label x="76.2" y="113.03" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SDA" class="0">
+<segment>
+<pinref part="J6" gate="G$1" pin="1"/>
+<wire x1="19.05" y1="124.46" x2="19.05" y2="120.65" width="0.1524" layer="91"/>
+<label x="19.05" y="121.92" size="1.778" layer="95" rot="R270"/>
+</segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="SDA"/>
+<wire x1="73.66" y1="110.49" x2="76.2" y2="110.49" width="0.1524" layer="91"/>
+<label x="75.565" y="110.49" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="J4" gate="G$1" pin="A4"/>
+<wire x1="48.26" y1="82.55" x2="45.085" y2="82.55" width="0.1524" layer="91"/>
+<wire x1="45.085" y1="82.55" x2="45.085" y2="85.725" width="0.1524" layer="91"/>
+<pinref part="J5" gate="J$1" pin="2"/>
+<wire x1="45.085" y1="85.725" x2="41.91" y2="85.725" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -4693,6 +4931,11 @@ Adafruit</text>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
